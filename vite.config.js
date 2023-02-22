@@ -11,7 +11,11 @@ export default defineConfig({
             refresh: [
                 ...refreshPaths,
             ],
+            server: {
+                hmr: {
+                    host: 'https://www.bsmanagement.info',
+                },
+            }
         }),
-
     ],
 });
