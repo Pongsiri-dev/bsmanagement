@@ -1,11 +1,11 @@
 import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
 // 001 import the basicSsl Vite plugin
-import basicSsl from '@vitejs/plugin-basic-ssl'
+// import basicSsl from '@vitejs/plugin-basic-ssl'
 
-// 002 set the Laravel host and the port
-const host = '192.168.1.3';
-const port = '8000';
+// // 002 set the Laravel host and the port
+// const host = '192.168.1.3';
+// const port = '8000';
 
 export default defineConfig({
     plugins: [
@@ -14,24 +14,24 @@ export default defineConfig({
                 'resources/css/app.css',
                 'resources/js/app.js',
             ],
-            refresh: true,
+            // refresh: true,
         }),
         // 003 load the basicSsl plugin
-        basicSsl()
+        // basicSsl()
     ],
     // 004 set the server section
-    server: {
-        // 005 enabling the HTTPS
-        https: true,
-        // 006 setting the proxy with Laravel as target (origin)
-        proxy: {
-            '^(?!(\/\@vite|\/resources|\/node_modules))': {
-                target: `http://${host}:${port}`,
-            }
-        },
-        host: '0.0.0.0',
-        port: 5173,
-        // 007 be sure that you have the Hot Module Replacement
-        hmr: { host },
-    }
+    // server: {
+    //     // 005 enabling the HTTPS
+    //     https: true,
+    //     // 006 setting the proxy with Laravel as target (origin)
+    //     proxy: {
+    //         '^(?!(\/\@vite|\/resources|\/node_modules))': {
+    //             target: `http://${host}:${port}`,
+    //         }
+    //     },
+    //     host: '0.0.0.0',
+    //     port: 5173,
+    //     // 007 be sure that you have the Hot Module Replacement
+    //     hmr: { host },
+    // }
 });
