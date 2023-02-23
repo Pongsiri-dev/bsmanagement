@@ -4,6 +4,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
     @vite('resources/css/app.css')
 </head>
 
@@ -72,7 +76,7 @@
                 <div class="mx-auto max-w-2xl py-1 sm:py-1 lg:py-1">
                     <div class="sm:mb-8 sm:flex sm:justify-center">
                         <div class="relative">
-                            <form action="{{ route('addEvents') }}" method="post">
+                            <form action="{{ route('CheckInEvents') }}" method="post">
                                 @csrf
                                 <div class="py-1 flex flex-col justify-center sm:py-1">
                                     <div class="relative py-3 sm:max-w-xl sm:mx-auto">
@@ -99,55 +103,29 @@
                                                         class="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
                                                         <div class="flex flex-col">
                                                             <label class="leading-loose">ชื่ออีเว้นท์</label>
-                                                            <input type="hidden" name="event"
+                                                            <input type="hidden" name="event_id"
                                                                 value="{{ $event->id }}">
-                                                            <input type="text" name="event_name" disabled readonly
+                                                            <input type="text" name="event_name"
                                                                 value="{{ $event->event_name }}"
                                                                 class="cursor-not-allowed px-4 py-2 bg-gray-300 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
                                                                 placeholder="{{ $event->event_name }}">
                                                         </div>
-                                                        {{-- <div class="flex items-center space-x-4">
-                                                            <div class="flex flex-col">
-                                                                <label class="leading-loose">ชื่อจริง</label>
-                                                                <div
-                                                                    class="relative max-w-sm focus-within:text-gray-600 text-gray-400">
-                                                                    <input type="text" name="firstname"
-                                                                        class="pr-4 pl-10 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
-                                                                        placeholder="ระบุชื่อจริง">
-                                                                </div>
-                                                            </div>
-                                                            <div class="flex flex-col">
-                                                                <label class="leading-loose">นามสกุล</label>
-                                                                <div
-                                                                    class="relative focus-within:text-gray-600 text-gray-400">
-                                                                    <input type="text" name="lastname"
-                                                                        class="pr-4 pl-10 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
-                                                                        placeholder="ระบุนามสกุล">
-                                                                </div>
-                                                            </div>
-                                                        </div> --}}
                                                         <div class="flex flex-col">
                                                             <label class="leading-loose">เบอร์โทรศัพท์</label>
-                                                            <input type="text" name="phone"
+                                                            <input type="text" name="member_telephone"
                                                                 class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
                                                                 placeholder="ระบุเบอร์โทรศัพท์">
                                                         </div>
                                                         <div class="flex flex-col">
                                                             <label class="leading-loose">รหัสผู้ใช้งาน
                                                                 <span class="inset-0 text-indigo-600"
-                                                                    aria-hidden="true">(Member ID)</span></label>
-                                                            <input type="text" name="phone"
+                                                                    aria-hidden="true">(Member Code)</span></label>
+                                                            <input type="text" name="member_code"
                                                                 class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
-                                                                placeholder="รหัสผู้ใช้งาน (Member_id)">
+                                                                placeholder="เช่น 0000234">
                                                         </div>
-
-
                                                     </div>
                                                     <div class="pt-4 flex items-center space-x-4">
-                                                        {{-- <button type="submit"
-                                                            class="mt-10 flex w-full items-center justify-center rounded-md border bg-600 py-3 px-8 text-base font-small hover:bg-red-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
-                                                            ยกเลิก</button> --}}
-
                                                         <button type="submit"
                                                             class="transition ease-in duration-300 mt-10 flex w-full items-center justify-center rounded-md border bg-orange-200 py-3 px-8 text-base font-small hover:bg-orange-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
                                                             เข้าร่วม</button>
@@ -180,6 +158,54 @@
         </main>
     </div>
     {{-- close section I --}}
+    {{-- Modal --}}
+    @if (session('success'))
+        <script>
+            $(document).ready(function() {
+                $('.btn').click();
+            })
+        </script>
+    @endif
+    @if (session('warning'))
+        <script>
+            $(document).ready(function() {
+                $('.btnw').click();
+            })
+        </script>
+    @endif
+
+    {{-- WARNING --}}
+    <label for="my-modal-w" class="btnw" style="visibility: hidden">open modal</label>
+    <input type="checkbox" id="my-modal-w" class="modal-toggle" />
+    <label for="my-modal-w" class="modal cursor-pointer">
+        <div class="modal-box relative alert alert-warning shadow-lg">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current flex-shrink-0 h-6 w-6" fill="none"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+                <span>{{ session('warning') }}</span>
+            </div>
+        </div>
+    </label>
+
+    {{-- SUCCESS --}}
+    <label for="my-modal" class="btn" style="visibility: hidden">open modal</label>
+    <input type="checkbox" id="my-modal" class="modal-toggle" />
+    <label for="my-modal" class="modal cursor-pointer">
+        <div class="modal-box relative alert alert-success shadow-lg">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current flex-shrink-0 h-6 w-6" fill="none"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span>{{ session('success') }}</span>
+            </div>
+        </div>
+    </label>
+    {{-- Close Modal --}}
 </body>
 
 </html>

@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\CheckInEvent;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Http;
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
 use Illuminate\Support\Facades\Storage;
@@ -37,7 +39,6 @@ class EventController extends Controller
     // บันทึกข้อมูล
     public function store(Request $request)
     {
-
         $event = new Events;
         $event->event_name = $request->event_name;
         $event->event_description = $request->event_description;
@@ -58,5 +59,45 @@ class EventController extends Controller
             ->where('id', $event->id)
             ->update(['event_path' => $pathQR]);
         return redirect()->back()->with('success', 'สร้างอีเว้นท์เรียบร้อย');
+    }
+
+    public function checkIn(Request $request)
+    {
+        $checkIn = new CheckInEvent;
+        if ($request->member_code != null) {
+
+            $apiURL = env('API_URL') . '' . '/findMember';
+            $postInput = [
+                'member_code' => $request->member_code
+            ];
+            $headers = [
+                'SecretID' => '0e900b35ce9d147442aa7bf0ff25e731f8f28235',
+                'Content-Type' => 'application/json',
+                'Session' => 'c5023b48b094018b11611249579fa339fc744c1d'
+            ];
+            $response = Http::withHeaders($headers)->post($apiURL, $postInput);
+            $responseBody = json_decode($response->getBody(), true);
+            if ($responseBody != null) {
+                if (array_key_exists('result', $responseBody)) {
+                    $data = $responseBody['result'];
+                    $checkIn->event_id = $request->event_id;
+                    $checkIn->event_name = $request->event_name;
+                    $checkIn->member_code = $data['member']['member_code'];
+                    $checkIn->member_firstname = $data['member']['name'];
+                    $checkIn->member_lastname = $data['member']['lastname'];
+                    $checkIn->member_telephone = $data['member']['telephone'];
+
+                    $chk = DB::table('check_in_events')->where('member_code', $checkIn->member_code)->first();
+                    if ($chk != null) {
+                        return redirect()->back()->with('warning', 'ไม่สามารถลงทะเบียนซ้ำได้ กรุณาติดต่อเจ้าหน้าที่');
+                    } else {
+                        $checkIn->save();
+                    }
+                }
+                return redirect()->back()->with('success', 'ลงทะเบียนเข้าร่วมงานเรียบร้อย');
+            } else {
+                return redirect()->back()->with('warning', 'ไม่พบข้อมูล กรุณาติดต่อเจ้าหน้าที่');
+            }
+        }
     }
 }

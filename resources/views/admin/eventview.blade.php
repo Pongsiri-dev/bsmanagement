@@ -6,6 +6,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>รายละเอียดอีเว้นท์</title>
+
+    <style>
+        .scan {
+            position: relative;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .scan .qrcode::befor {
+            content: '';
+            position: absolute;
+            inset: 0px;
+            width: 100%;
+            height: 100%;
+            background: #ffa600;
+            /* filter: drop-shadow(0 0 20px #ffa600) drop-shadow(0 0 60px #ffa600); */
+            animation: animate 4s linear infinite;
+        }
+
+        @keyframes animate {
+
+            0%,
+            100% {
+                height: 20px;
+            }
+
+            50% {
+                height: 100%;
+            }
+        }
+
+        .scan .qrcode::after {
+            content: '';
+            position: absolute;
+            inset: 0px;
+            width: 100%;
+            height: 7px;
+            background: #ffa600;
+            filter: drop-shadow(0 0 20px #ffa600) drop-shadow(0 0 60px #ffa600);
+            animation: animateLine 4s ease-in-out infinite;
+        }
+
+        @keyframes animateLine {
+
+            0% {
+                top: 20px;
+            }
+
+            50% {
+                top: 100%;
+            }
+        }
+    </style>
 </head>
 
 <body class="bg-gray-100">
@@ -55,22 +109,14 @@
                     <div class="stat-desc text-secondary">31 tasks remaining</div>
                 </div>
             </div>
-            <div class="flex items-center justify-center">
-
-                <div class="bg-gray-100 py-6 flex flex-col sm:py-6">
-                    <div class="relative py-3 sm:max-w-xl sm:mx-auto">
-                        <div class="relative px-6 py-10 bg-white mx-8 md:mx-0 shadow rounded-3xl sm:p-10">
-                            <div class="max-w-md mx-auto">
-                                {{-- <div class="basis-1/4 bg-sky-500/100 justify-center">01</div> --}}
-                                <div class="bg-sky-500/70">
-                                    <img src="/{{ $eventview->event_path }}" alt="{{ $eventview->event_path }}"
-                                        width="200" height="100" />
-                                </div>
-                                {{-- <div class="basis-1/4 bg-sky-500/20 justify-center">03</div> --}}
-                            </div>
-                        </div>
+            <div class="mt-52 py-6 flex flex-col sm:py-6 items-center justify-center scan">
+                <div class="bg-white">
+                    <div class="relative px-8 py-8 sm:max-w-xl sm:mx-auto hadow-lg qrcode">
+                        <img class="shadow-lg" src="/{{ $eventview->event_path }}" alt="{{ $eventview->event_path }}"
+                            width="200" height="100" />
                     </div>
                 </div>
+                <div class="relative justify-center"> </div>
             </div>
             <!-- END Column -->
         </div>

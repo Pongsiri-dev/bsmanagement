@@ -57,7 +57,10 @@ Route::get('/dashboard/events/new', [EventController::class, 'index'])->name('ev
 Route::post('/dashboard/events/add', [EventController::class, 'store'])->name('addEvents');
 Route::get('/dashboard/events/list', [EventController::class, 'eventList'])->name('eventslist');
 Route::get('/dashboard/events/view/{id?}', [EventController::class, 'eventView'])->name('eventview');
-Route::get('/generate-qrcode', [QrCodeController::class, 'index']);
 
+
+//Public Link
+Route::post('/CheckInEvents', [EventController::class, 'checkIn'])->name('CheckInEvents');
 
 // QR CODE
+Route::get('/generate-qrcode', [QrCodeController::class, 'index']);
