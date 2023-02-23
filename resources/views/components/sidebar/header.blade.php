@@ -3,7 +3,7 @@
     <a href="{{ route('dashboard') }}" class="inline-flex items-center gap-2">
         {{-- <x-application-logo aria-hidden="true" class="w-10 h-auto" /> --}}
         <div>
-            <img src="{{ url('/logo-barter.png') }}" width="20" />
+            <img src="{{ url('/logo-barter.png') }}" width="40" />
         </div>
         <span class="sr-only">BarterSmart Logo</span>
     </a>
