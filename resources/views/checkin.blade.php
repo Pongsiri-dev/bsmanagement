@@ -24,7 +24,7 @@
                 </defs>
             </svg>
         </div>
-        <div class="px-6 pt-6 lg:px-8">
+        {{-- <div class="px-6 pt-6 lg:px-8">
             <nav class="flex items-center justify-between" aria-label="Global">
                 <div class="flex lg:flex-1">
                     <a href="#" class="-m-1.5 p-1.5">
@@ -66,7 +66,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <main>
             <div class="relative px-6 lg:px-8">
                 <div class="mx-auto max-w-2xl py-1 sm:py-1 lg:py-1">
@@ -180,8 +180,6 @@
         </main>
     </div>
     {{-- close section I --}}
-
-    {{-- close section II --}}
 </body>
 
 </html>
