@@ -45,15 +45,18 @@
                         </svg>
                     </button>
                 </div>
+                {{-- Menu --}}
                 <div class="hidden lg:flex lg:gap-x-12">
-                    <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Event</a>
+                    {{-- <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Event</a>
                     <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Features</a>
                     <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Marketplace</a>
-                    <a href="#" class="text-sm font-semibold leading-6 text-gray-900">About</a>
+                    <a href="#" class="text-sm font-semibold leading-6 text-gray-900">About</a> --}}
                 </div>
                 <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-                    <a href="{{ url('/login') }}" class="text-sm font-semibold leading-6 text-gray-900">เข้าสู่ระบบ<span
-                            aria-hidden="true">&rarr;</span></a>
+                    <a href="{{ url('/login') }}"
+                        class="relative rounded-full py-1 px-3 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20 font-semibold
+                        bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 ">เข้าสู่ระบบ
+                        <span aria-hidden="true">&rarr;</span></a>
                 </div>
             </nav>
             <!-- Mobile menu, show/hide based on menu open state. -->
@@ -130,7 +133,7 @@
                             <div class="text-center">
                                 <h3 class="text-3xl mb-3"> ดาวน์โหลดแอพลิเคชั่น </h3>
                                 <div class="flex justify-center my-10">
-                                    <div class="flex items-center border w-auto rounded-lg px-4 py-2 w-52 mx-2">
+                                    <div class="flex items-center border rounded-lg px-4 py-2 w-52 mx-2">
                                         <img src="https://cdn-icons-png.flaticon.com/512/888/888857.png"
                                             class="w-7 md:w-8">
                                         <div class="text-left ml-3">
@@ -138,7 +141,7 @@
                                             <p class="text-sm md:text-base"> Google Play Store </p>
                                         </div>
                                     </div>
-                                    <div class="flex items-center border w-auto rounded-lg px-4 py-2 w-44 mx-2">
+                                    <div class="flex items-center border rounded-lg px-4 py-2 w-44 mx-2">
                                         <img src="https://cdn-icons-png.flaticon.com/512/888/888841.png"
                                             class="w-7 md:w-8">
                                         <div class="text-left ml-3">

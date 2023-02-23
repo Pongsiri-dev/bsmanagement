@@ -34,7 +34,7 @@
         </div>
     </x-app-layout>
 
-    <script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
+    {{-- <script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script> --}}
 
     <script>
         $(document).ready(function() {

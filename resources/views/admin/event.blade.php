@@ -13,12 +13,6 @@
 
 <body class="font-['Anuphan']">
     <x-app-layout>
-        {{-- <x-slot name="header">
-            <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                {{ __('Dashboard') }}
-            </h2>
-        </x-slot> --}}
-
         <form action="{{ route('addEvents') }}" method="post">
             @csrf
             <div class="bg-gray-100 py-1 flex flex-col justify-center sm:py-1">
@@ -144,7 +138,6 @@
     {{-- for script  --}}
     <script>
         $('.GenQrCode').click(function() {
-            console.log('Event Click add ');
             // Request QR code 
             if ("WebSocket" in window) {
                 var base = window.location.hostname;
@@ -161,13 +154,13 @@
                 };
                 ws.onmessage = function(evt) {
                     const data = JSON.parse(event.data);
-                    console.log("datafromservver", data);
+                    // console.log("datafromservver", data);
                     const step = data.data && data.data.step;
                     if (step === 0) {
                         //Generate QR Code and show to user.
                         $("#qrcode").qrcode({
-                            "width": 100,
-                            "height": 100,
+                            "width": 150,
+                            "height": 150,
                             "text": data.data.url
                         });
                         console.log("QR code generated successfully");
