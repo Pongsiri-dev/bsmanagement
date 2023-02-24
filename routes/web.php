@@ -53,40 +53,21 @@ Route::controller(SearchController::class)->group(function () {
 Route::get('/dashboard/users', [UserController::class, 'index'])->name('users');
 
 // Event
-Route::get('/dashboard/events/new', [EventController::class, 'index'])->name('events');
-Route::post('/dashboard/events/add', [EventController::class, 'store'])->name('addEvents');
-Route::get('/dashboard/events/list', [EventController::class, 'eventList'])->name('eventslist');
-Route::get('/dashboard/events/view/{id?}', [EventController::class, 'eventView'])->name('eventview');
+Route::controller(EventController::class)->group(function () {
+    Route::get('/dashboard/events/new', 'index')->name('events');
+    Route::post('/dashboard/events/add', 'store')->name('addEvents');
+    Route::get('/dashboard/events/list', 'eventList')->name('eventslist');
+    Route::get('/dashboard/events/view/{id?}', 'eventView')->name('eventview');
+});
+
+// Route::get('/dashboard/events/new', [EventController::class, 'index'])->name('events');
+// Route::post('/dashboard/events/add', [EventController::class, 'store'])->name('addEvents');
+// Route::get('/dashboard/events/list', [EventController::class, 'eventList'])->name('eventslist');
+// Route::get('/dashboard/events/view/{id?}', [EventController::class, 'eventView'])->name('eventview');
 
 
 //Public Link
 Route::post('/CheckInEvents', [EventController::class, 'checkIn'])->name('CheckInEvents');
 
 // QR CODE
-Route::get('/generate-qrcode', [QrCodeController::class, 'index']);
-
-
-// Cache
-//Clear route cache:
-Route::get('/route-cache', function () {
-    $exitCode = Artisan::call('route:cache');
-    return 'Routes cache cleared';
-});
-
-//Clear config cache:
-Route::get('/config-cache', function () {
-    $exitCode = Artisan::call('config:cache');
-    return 'Config cache cleared';
-});
-
-// Clear application cache:
-Route::get('/clear-cache', function () {
-    $exitCode = Artisan::call('cache:clear');
-    return 'Application cache cleared';
-});
-
-// Clear view cache:
-Route::get('/view-clear', function () {
-    $exitCode = Artisan::call('view:clear');
-    return 'View cache cleared';
-});
+// Route::get('/generate-qrcode', [QrCodeController::class, 'index']);
