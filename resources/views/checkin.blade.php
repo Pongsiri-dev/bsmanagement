@@ -76,7 +76,7 @@
                 <div class="mx-auto max-w-2xl py-1 sm:py-1 lg:py-1">
                     <div class="sm:mb-8 sm:flex sm:justify-center">
                         <div class="relative">
-                            <form action="{{ route('CheckInEvents') }}" method="post">
+                            <form action="{{ route('checkInEvents') }}" method="post">
                                 @csrf
                                 <div class="py-1 flex flex-col justify-center sm:py-1">
                                     <div class="relative py-3 sm:max-w-xl sm:mx-auto">
