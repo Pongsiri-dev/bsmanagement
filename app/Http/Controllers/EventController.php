@@ -64,7 +64,7 @@ class EventController extends Controller
         $checkIn = new CheckInEvent;
         if ($request->member_code != null) {
 
-            $apiURL = env('API_URL') . '' . '/findMember';
+            $apiURL = 'https://web.bartersmart.co.th/index.php/Api_m/main/findMember';
             $postInput = [
                 'member_code' => $request->member_code
             ];
