@@ -59,10 +59,10 @@
                                 </th>
                                 <th
                                     class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
-                                    วันที่สมัคร
+                                    วันที่ลงทะเบียน
                                 </th>
                                 <th
-                                    class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
+                                    class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-center text-xs font-semibold text-gray-700 uppercase tracking-wider">
                                     สถานะ
                                 </th>
                                 <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100"></th>
@@ -82,7 +82,7 @@
                                                     คุณ {{ $item->member_firstname . ' ' . $item->member_lastname }}
                                                 </p>
                                                 <p class="text-gray-600 whitespace-no-wrap">
-                                                    {{ phoneNumberFormat($item->member_telephone) }}
+                                                    {{ $item->member_code }}
                                                 </p>
                                             </div>
                                         </div>
