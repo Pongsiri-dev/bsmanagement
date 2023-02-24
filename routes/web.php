@@ -60,7 +60,7 @@ Route::controller(EventController::class)->group(function () {
     Route::get('/dashboard/events/list', 'eventList')->name('eventslist');
     Route::get('/dashboard/events/view/{id?}', 'eventView')->name('eventview');
     //Public Link
-    Route::post('/CheckInEvents', [EventController::class, 'checkIn'])->name('CheckInEvents');
+    Route::post('/CheckInEvents')->name('CheckInEvents');
 });
 
 // Audience
