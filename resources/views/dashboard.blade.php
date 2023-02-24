@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dashboard</title>
-    @vite('resources/css/app.css')
+    {{-- @vite('resources/css/app.css') --}}
     <style>
         .wrapper {
             display: grid;
@@ -15,13 +15,8 @@
     </style>
 </head>
 
-<body>
+<body class="font-['Anuphan']">
     <x-app-layout>
-        {{-- <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
-    </x-slot> --}}
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mb-6 overflow-hidden font-['Anuphan']">
             <div class="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]">
                 <svg class="relative left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[42.375rem]"
@@ -199,8 +194,6 @@
                     </div> --}}
                     </div>
             </section>
-
-
 
             {{-- Table Events --}}
             {{-- <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mb-6"> --}}
@@ -687,7 +680,6 @@
                 </div>
             </div>
             {{-- </div> --}}
-        </div>
         </div>
     </x-app-layout>
 

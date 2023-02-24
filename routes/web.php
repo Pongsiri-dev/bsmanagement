@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AudienceController;
 use Illuminate\Support\Facades\Route;
 use App\Models\Events;
 use App\Models\User;
@@ -58,16 +59,20 @@ Route::controller(EventController::class)->group(function () {
     Route::post('/dashboard/events/add', 'store')->name('addEvents');
     Route::get('/dashboard/events/list', 'eventList')->name('eventslist');
     Route::get('/dashboard/events/view/{id?}', 'eventView')->name('eventview');
+    //Public Link
+    Route::post('/CheckInEvents', [EventController::class, 'checkIn'])->name('CheckInEvents');
+});
+
+// Audience
+Route::controller(AudienceController::class)->group(function () {
+    Route::get('/dashboard/audience', 'index');
+    Route::get('/dashboard/audience/{eid}', 'searchAudience')->name('audiencelist');
 });
 
 // Route::get('/dashboard/events/new', [EventController::class, 'index'])->name('events');
 // Route::post('/dashboard/events/add', [EventController::class, 'store'])->name('addEvents');
 // Route::get('/dashboard/events/list', [EventController::class, 'eventList'])->name('eventslist');
 // Route::get('/dashboard/events/view/{id?}', [EventController::class, 'eventView'])->name('eventview');
-
-
-//Public Link
-Route::post('/CheckInEvents', [EventController::class, 'checkIn'])->name('CheckInEvents');
 
 // QR CODE
 // Route::get('/generate-qrcode', [QrCodeController::class, 'index']);
