@@ -18,7 +18,7 @@ class SearchController extends Controller
 
     public function findData(Request $request)
     {
-        $apiURL = env('API_URL') . '' . '/findMember';
+        $apiURL = 'https://web.bartersmart.co.th/index.php/Api_m/main/findMember';
         $postInput = [
             'member_code' => $request->search
         ];
