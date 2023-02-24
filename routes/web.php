@@ -27,6 +27,7 @@ Route::get('/', function () {
 
 Route::get('/checkin/{event?}', function ($event) {
     // dd($event);
+    // printf("%s", 'XXXXX');
     $event = Events::where('id', '=', $event)->firstOrFail();
     return view('checkin', compact('event'));
 });
@@ -59,6 +60,7 @@ Route::controller(EventController::class)->group(function () {
     Route::post('/dashboard/events/add', 'store')->name('addEvents');
     Route::get('/dashboard/events/list', 'eventList')->name('eventslist');
     Route::get('/dashboard/events/view/{id?}', 'eventView')->name('eventview');
+    Route::post('/checkInEvents', 'checkIn')->name('checkInEvents');
 });
 
 // Audience
@@ -73,7 +75,7 @@ Route::controller(AudienceController::class)->group(function () {
 // Route::get('/dashboard/events/view/{id?}', [EventController::class, 'eventView'])->name('eventview');
 
 //Public Link
-Route::post('/checkInEvents', [EventController::class, 'checkIn'])->name('checkInEvents');
+// Route::post('/checkInEvents', [EventController::class, 'checkIn'])->name('checkInEvents');
 
 
 // QR CODE

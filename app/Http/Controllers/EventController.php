@@ -31,8 +31,6 @@ class EventController extends Controller
     public function eventView($id)
     {
         $eventview = Events::where('id', '=', $id)->firstOrFail();
-        // dd($eventview);
-        // $eventview = DB::table('events')->where('id', $id)->first();
         return view('admin.eventview', compact('eventview'));
     }
 
