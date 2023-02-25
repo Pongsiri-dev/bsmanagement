@@ -127,7 +127,7 @@
                                                     </div>
                                                     <div class="pt-4 flex items-center space-x-4">
                                                         <button type="submit"
-                                                            class="transition ease-in duration-300 mt-10 flex w-full items-center justify-center rounded-md border bg-orange-400 py-3 px-8 text-base font-small hover:bg-orange-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                                                            class="transition ease-in duration-300 mt-10 flex w-full items-center justify-center rounded-md border bg-orange-400 py-3 px-8 font-small hover:bg-orange-400">
                                                             เข้าร่วม</button>
                                                     </div>
                                                 </div>
