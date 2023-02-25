@@ -89,7 +89,7 @@
                                     class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10">Company</a>
                             </div> --}}
                             <div>
-                                <img src="{{ url('/flame-data-visualisation.png') }}" alt="" srcset="">
+                                <img src="{{ url('/logo-barter.png') }}" alt="" srcset="">
                             </div>
                         </div>
                     </div>
@@ -108,14 +108,14 @@
         <main>
             <div class="relative px-6 lg:px-8">
                 <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-20">
-                    <div class="hidden sm:mb-8 sm:flex sm:justify-center">
+                    {{-- <div class="hidden sm:mb-8 sm:flex sm:justify-center">
                         <div
                             class="relative rounded-full py-1 px-3 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
                             Announcing our next round of funding. <a href="#"
                                 class="font-semibold text-indigo-600"><span class="absolute inset-0"
                                     aria-hidden="true"></span>Read more <span aria-hidden="true">&rarr;</span></a>
                         </div>
-                    </div>
+                    </div> --}}
                     <div class="text-center">
                         <h1 class="text-4xl font-regular tracking-tight text-gray-700 sm:text-6xl">สังคมไร้เงินสด
                             แต่ไม่ไร้น้ำใจ</h1>
