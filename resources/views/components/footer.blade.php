@@ -1,7 +1,7 @@
 {{-- section footer --}}
 <footer class="px-4 divide-y dark:bg-gray-800 dark:text-gray-100">
-    <div class="container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
-        <div class="lg:w-1/3">
+    <div class="container flex flex-col justify-center py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
+        <div class="justify-center ">
             <a rel="noopener noreferrer" href="#" class="flex justify-center space-x-3 lg:justify-start">
                 <div class="flex items-center justify-center w-12 h-12 rounded-full dark:bg-violet-400">
                     <img src="{{ url('/logo-barter.png') }}" alt="logo">
@@ -9,7 +9,7 @@
                 <span class="self-center text-2xl font-semibold">Bartersmart</span>
             </a>
         </div>
-        <div class="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">
+        {{-- <div class="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">
             <div class="space-y-3">
                 <h3 class="tracking-wide uppercase dark:text-gray-50">Product</h3>
                 <ul class="space-y-1">
@@ -80,7 +80,7 @@
                     </a>
                 </div>
             </div>
-        </div>
+        </div> --}}
     </div>
     <div class="py-6 text-sm text-center dark:text-gray-400">© 2023 Company Co. All rights reserved.</div>
 </footer>

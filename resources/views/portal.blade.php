@@ -184,7 +184,7 @@
     {{-- close section I --}}
 
     {{-- Section II --}}
-    <div class="bg-white py-24 sm:py-20">
+    {{-- <div class="bg-white py-24 sm:py-20">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
             <div class="mx-auto max-w-2xl lg:text-center">
                 <h2 class="text-lg font-semibold leading-8 tracking-tight text-indigo-600">หน่วยแลกเปลี่ยนของเรา</h2>
@@ -197,7 +197,6 @@
                         <dt class="text-base font-semibold leading-7 text-gray-900">
                             <div
                                 class="absolute top-0 left-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
-                                <!-- Heroicon name: outline/cloud-arrow-up -->
                                 <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
                                     viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -222,7 +221,6 @@
                         <dt class="text-base font-semibold leading-7 text-gray-900">
                             <div
                                 class="absolute top-0 left-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
-                                <!-- Heroicon name: outline/lock-closed -->
                                 <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
                                     viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -241,7 +239,6 @@
                         <dt class="text-base font-semibold leading-7 text-gray-900">
                             <div
                                 class="absolute top-0 left-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
-                                <!-- Heroicon name: outline/arrow-path -->
                                 <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
                                     viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -264,7 +261,6 @@
                         <dt class="text-base font-semibold leading-7 text-gray-900">
                             <div
                                 class="absolute top-0 left-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
-                                <!-- Heroicon name: outline/finger-print -->
                                 <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
                                     viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -283,20 +279,20 @@
                 </dl>
             </div>
         </div>
-    </div>
+    </div> --}}
     {{-- close section II --}}
     {{-- section footer --}}
     <footer class="px-4 divide-y dark:bg-gray-800 dark:text-gray-100">
-        <div class="container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
-            <div class="lg:w-1/3">
+        {{-- <div class="container flex flex-col justify-center py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
+            <div class="justify-center ">
                 <a rel="noopener noreferrer" href="#" class="flex justify-center space-x-3 lg:justify-start">
                     <div class="flex items-center justify-center w-12 h-12 rounded-full dark:bg-violet-400">
                         <img src="{{ url('/logo-barter.png') }}" alt="logo">
                     </div>
                     <span class="self-center text-2xl font-semibold">Bartersmart</span>
                 </a>
-            </div>
-            <div class="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">
+            </div> --}}
+        {{-- <div class="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">
                 <div class="space-y-3">
                     <h3 class="tracking-wide uppercase dark:text-gray-50">Product</h3>
                     <ul class="space-y-1">
@@ -367,7 +363,7 @@
                         </a>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
         <div class="py-6 text-sm text-center dark:text-gray-400">© 2023 Company Co. All rights reserved.</div>
     </footer>
