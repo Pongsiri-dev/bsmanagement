@@ -19,8 +19,8 @@
                         <article class="overflow-hidden rounded-lg shadow-lg">
                             <a href="{{ route('eventview', $item->id) }}">
 
-                                <img alt="Placeholder" class="block h-auto w-full"
-                                    src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1712&q=80">
+                                {{-- <img alt="Placeholder" class="block h-auto w-full"
+                                    src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1712&q=80"> --}}
                                 {{-- <img alt="Placeholder" class="block h-auto w-full"
                                     src="https://picsum.photos/600/400/?random"> --}}
                             </a>
@@ -31,17 +31,17 @@
                                     </span>
                                 </h1>
                                 <p class="text-grey-darker text-sm">
-                                    {{ $item->event_sdate }}
+                                    {{ SlashDateOnly($item->event_sdate) }}
                                 </p>
                             </header>
 
                             <footer class="flex bg-white items-center justify-between leading-none p-2 md:p-4">
                                 <a class="flex items-center no-underline hover:underline text-black"
                                     href="{{ route('eventview', $item->id) }}">
-                                    <img alt="Placeholder" class="block rounded-full"
-                                        src="https://picsum.photos/32/32/?random">
+                                    {{-- <img alt="Placeholder" class="block rounded-full"
+                                        src="https://picsum.photos/32/32/?random"> --}}
                                     <p class="ml-2 text-sm">
-                                        {{ $item->event_author }}
+                                        ผู้จัด : {{ $item->event_author }}
                                     </p>
                                 </a>
 

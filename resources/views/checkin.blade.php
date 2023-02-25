@@ -114,7 +114,7 @@
                                                             <label class="leading-loose">เบอร์โทรศัพท์</label>
                                                             <input type="text" name="member_telephone"
                                                                 class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
-                                                                placeholder="ระบุเบอร์โทรศัพท์">
+                                                                placeholder="ระบุเบอร์โทรศัพท์" required>
                                                         </div>
                                                         <div class="flex flex-col">
                                                             <label class="leading-loose">รหัสผู้ใช้งาน
@@ -122,12 +122,12 @@
                                                                     aria-hidden="true">(Member Code)</span></label>
                                                             <input type="text" name="member_code"
                                                                 class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
-                                                                placeholder="เช่น 0000234">
+                                                                placeholder="เช่น 0000234" required>
                                                         </div>
                                                     </div>
                                                     <div class="pt-4 flex items-center space-x-4">
                                                         <button type="submit"
-                                                            class="transition ease-in duration-300 mt-10 flex w-full items-center justify-center rounded-md border bg-orange-200 py-3 px-8 text-base font-small hover:bg-orange-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                                                            class="transition ease-in duration-300 mt-10 flex w-full items-center justify-center rounded-md border bg-orange-400 py-3 px-8 text-base font-small hover:bg-orange-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
                                                             เข้าร่วม</button>
                                                     </div>
                                                 </div>

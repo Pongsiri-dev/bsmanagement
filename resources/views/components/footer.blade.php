@@ -6,7 +6,7 @@
                 <div class="flex items-center justify-center w-12 h-12 rounded-full dark:bg-violet-400">
                     <img src="{{ url('/logo-barter.png') }}" alt="logo">
                 </div>
-                <span class="self-center text-2xl font-semibold">Barter Smart</span>
+                <span class="self-center text-2xl font-semibold">Bartersmart</span>
             </a>
         </div>
         <div class="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">

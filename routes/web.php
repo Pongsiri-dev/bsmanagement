@@ -26,8 +26,6 @@ Route::get('/', function () {
 });
 
 Route::get('/checkin/{event?}', function ($event) {
-    // dd($event);
-    // printf("%s", 'XXXXX');
     $event = Events::where('id', '=', $event)->firstOrFail();
     return view('checkin', compact('event'));
 });
@@ -52,7 +50,8 @@ Route::controller(SearchController::class)->group(function () {
 })->name('search');
 
 // Users
-Route::get('/dashboard/users', [UserController::class, 'index'])->name('users');
+// Route::get('/dashboard/addaudience', [UserController::class, 'index'])->name('addaudience');
+// Route::get('/dashboard/users', [UserController::class, 'index'])->name('users');
 
 // Event
 Route::controller(EventController::class)->group(function () {
@@ -60,6 +59,8 @@ Route::controller(EventController::class)->group(function () {
     Route::post('/dashboard/events/add', 'store')->name('addEvents');
     Route::get('/dashboard/events/list', 'eventList')->name('eventslist');
     Route::get('/dashboard/events/view/{id?}', 'eventView')->name('eventview');
+    Route::get('/dashboard/addaudienceview', 'addaudienceview')->name('addaudienceview');
+    Route::post('/dashboard/addaudience', 'addaudience')->name('addaudience');
     Route::post('/checkInEvents', 'checkIn')->name('checkInEvents');
 });
 

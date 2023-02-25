@@ -25,7 +25,7 @@
         </x-slot>
     </x-sidebar.link>
 
-    <x-sidebar.link title="เพิ่มข้อมูลผู้เข้าร่วม" href="{{ url('/dashboard/users') }}" :isActive="request()->routeIs('users')">
+    <x-sidebar.link title="เพิ่มข้อมูลผู้เข้าร่วม" href="{{ url('/dashboard/addaudienceview') }}" :isActive="request()->routeIs('addaudienceview')">
         <x-slot name="icon">
             <x-icon name="user" solid mini />
         </x-slot>

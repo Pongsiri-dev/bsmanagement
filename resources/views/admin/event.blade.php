@@ -88,9 +88,9 @@
                                         <select id="userSel" name="event_assign"
                                             class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600">
                                             <option value="all">สมาชิกทั้งหมด</option>
-                                            @foreach ($users as $item)
+                                            {{-- @foreach ($users as $item)
                                                 <option value="{{ $item->id }}">{{ $item->name }}</option>
-                                            @endforeach
+                                            @endforeach --}}
                                         </select>
                                     </div>
                                 </div>

@@ -252,11 +252,13 @@
                                                             <img class="w-full h-full rounded-full"
                                                                 src="{{ $item->event_name }}" alt="" />
                                                         </div> --}}
-                                                        <div class="ml-3">
+                                                        <div class="ml-0">
                                                             <p class="text-gray-900 whitespace-no-wrap">
                                                                 {{ $item->event_name }}
                                                             </p>
-                                                            <p class="text-gray-600 whitespace-no-wrap">000004</p>
+                                                            <p class="text-gray-600 whitespace-no-wrap">
+                                                                ผู้จัด : {{ $item->event_author }}
+                                                            </p>
                                                         </div>
                                                     </div>
                                                 </td>
@@ -272,12 +274,25 @@
                                                         {{ $item->created_at->diffForHumans() }}</p>
                                                 </td>
                                                 <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                                    <span
+                                                    @if ($item->event_edate > Carbon\Carbon::now())
+                                                        <span
+                                                            class="relative inline-block px-3 py-1 font-semibold leading-tight">
+                                                            <span aria-hidden
+                                                                class="absolute inset-0 bg-green-400 opacity-300 rounded-full"></span>
+                                                        </span>
+                                                    @else
+                                                        <span
+                                                            class="relative inline-block px-3 py-1 font-semibold leading-tight">
+                                                            <span aria-hidden
+                                                                class="absolute inset-0 bg-red-400 opacity-300 rounded-full"></span>
+                                                        </span>
+                                                    @endif
+                                                    {{-- <span
                                                         class="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight">
                                                         <span aria-hidden
                                                             class="absolute inset-0 bg-green-200 opacity-50 rounded-full"></span>
                                                         <span class="relative">ใช้งาน</span>
-                                                    </span>
+                                                    </span> --}}
                                                 </td>
                                                 <td>
                                                     <div class="flex items-center">
@@ -294,17 +309,13 @@
                                                 </td>
                                                 <td
                                                     class="px-5 py-5 border-b border-gray-200 bg-white text-sm text-right">
-                                                    <button
+                                                    <a href="{{ route('audiencelist', $item->id) }}"
+                                                        class="bg-white py-1 px-4 border-2 border-x-orange-400 shadow">
+                                                        ดูข้อมูล
+                                                    </a>
+                                                    {{-- <button
                                                         class="bg-white hover:bg-gray-100 text-gray-800 py-1 px-4 border border-gray-400 rounded shadow">
                                                         ดูข้อมูล
-                                                    </button>
-                                                    {{-- <button type="button"
-                                                        class="inline-block text-gray-500 hover:text-gray-700">
-                                                        <svg class="inline-block h-6 w-6 fill-current"
-                                                            viewBox="0 0 24 24">
-                                                            <path
-                                                                d="M12 6a2 2 0 110-4 2 2 0 010 4zm0 8a2 2 0 110-4 2 2 0 010 4zm-2 6a2 2 0 104 0 2 2 0 00-4 0z" />
-                                                        </svg>
                                                     </button> --}}
                                                 </td>
                                             </tr>

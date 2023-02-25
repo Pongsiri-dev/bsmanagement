@@ -34,6 +34,31 @@ class EventController extends Controller
         return view('admin.eventview', compact('eventview'));
     }
 
+    public function addaudienceview(Request $request)
+    {
+        $eList = Events::all();
+        return view('admin.addaudience', compact('eList'));
+    }
+
+    public function addaudience(Request $request)
+    {
+        $checkIn = new CheckInEvent;
+        //find event
+        $data = Events::where("id", "=", $request->event_id)->firstOrFail();
+        if ($data != null) {
+            $checkIn->event_id = $data->id;
+            $checkIn->event_name = $data->event_name;
+            $checkIn->member_code = 0;
+            $checkIn->member_firstname = $request->firstname;
+            $checkIn->member_lastname = $request->lastname;
+            $checkIn->member_telephone = $request->phone;
+        } else {
+            return redirect()->back()->with('warning', 'ไม่สามารถลงทะเบียนได้');
+        }
+        $checkIn->save();
+        return redirect()->back()->with('success', 'ลงทะเบียนเข้าร่วมงานเรียบร้อย');
+    }
+
     // บันทึกข้อมูล
     public function store(Request $request)
     {
@@ -85,7 +110,9 @@ class EventController extends Controller
                     $checkIn->member_lastname = $data['member']['lastname'];
                     $checkIn->member_telephone = $data['member']['telephone'];
 
-                    $chk = DB::table('check_in_events')->where('member_code', $checkIn->member_code)->first();
+                    $chk = DB::table('check_in_events')
+                        ->where('event_id', '=', $checkIn->event_id)
+                        ->where('member_code', '=', $checkIn->member_code)->first();
                     if ($chk != null) {
                         return redirect()->back()->with('warning', 'ไม่สามารถลงทะเบียนซ้ำได้ กรุณาติดต่อเจ้าหน้าที่');
                     } else {

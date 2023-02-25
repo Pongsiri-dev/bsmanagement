@@ -8,16 +8,16 @@
     <div class="flex items-center gap-3">
         <x-button type="button" class="md:hidden" iconOnly variant="secondary" srText="Toggle dark mode"
             @click="toggleTheme">
-            <x-heroicon-o-moon x-show="!isDarkMode" aria-hidden="true" class="w-6 h-6" />
-            <x-heroicon-o-sun x-show="isDarkMode" aria-hidden="true" class="w-6 h-6" />
+            {{-- <x-heroicon-o-moon x-show="!isDarkMode" aria-hidden="true" class="w-6 h-6" />
+            <x-heroicon-o-sun x-show="isDarkMode" aria-hidden="true" class="w-6 h-6" /> --}}
         </x-button>
     </div>
 
     <div class="flex items-center gap-3">
         <x-button type="button" class="hidden md:inline-flex" iconOnly variant="secondary" srText="Toggle dark mode"
             @click="toggleTheme">
-            <x-heroicon-o-moon x-show="!isDarkMode" aria-hidden="true" class="w-6 h-6" />
-            <x-heroicon-o-sun x-show="isDarkMode" aria-hidden="true" class="w-6 h-6" />
+            {{-- <x-heroicon-o-moon x-show="!isDarkMode" aria-hidden="true" class="w-6 h-6" />
+            <x-heroicon-o-sun x-show="isDarkMode" aria-hidden="true" class="w-6 h-6" /> --}}
         </x-button>
 
         <!-- Teams Dropdown -->
@@ -104,9 +104,9 @@
                 <x-dropdown-link href="{{ route('profile.show') }}">
                     {{ __('Profile') }}
                 </x-dropdown-link>
-                <x-dropdown-link href="{{ route('profile.scancode') }}">
+                {{-- <x-dropdown-link href="{{ route('profile.scancode') }}">
                     {{ __('Scan QRCode') }}
-                </x-dropdown-link>
+                </x-dropdown-link> --}}
 
                 @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
                     <x-dropdown-link href="{{ route('api-tokens.index') }}">

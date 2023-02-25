@@ -35,7 +35,7 @@
                                                 d="M11 5a3 3 0 11-6 0 3 3 0 016 0zM2.615 16.428a1.224 1.224 0 01-.569-1.175 6.002 6.002 0 0111.908 0c.058.467-.172.92-.57 1.174A9.953 9.953 0 018 18a9.953 9.953 0 01-5.385-1.572zM16.25 5.75a.75.75 0 00-1.5 0v2h-2a.75.75 0 000 1.5h2v2a.75.75 0 001.5 0v-2h2a.75.75 0 000-1.5h-2v-2z" />
                                         </svg>
                                         <p class="ml-4">
-                                            เพิ่มข้อมูลผู้ใช้ใหม่
+                                            เพิ่มข้อมูลผู้เข้าร่วม
                                         </p>
                                     </div>
                                     {{-- <p class="text-sm text-gray-500 font-normal leading-relaxed"></p> --}}
@@ -100,15 +100,6 @@
                                         </select>
                                     </div>
                                 </div>
-                                {{-- <div class="pt-4 flex items-center space-x-4">
-                                    <button type="submit"
-                                        class="mt-10 flex w-full items-center justify-center rounded-md border bg-600 py-3 px-8 text-base font-small hover:bg-red-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
-                                        ยกเลิก</button>
-
-                                    <button type="submit"
-                                        class="transition ease-in duration-300 mt-10 flex w-full items-center justify-center rounded-md border bg-orange-200 py-3 px-8 text-base font-small hover:bg-orange-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
-                                        สร้างอีเว้นท์</button>
-                                </div> --}}
                             </div>
                         </div>
                     </div>
@@ -116,7 +107,7 @@
             </div>
 
             {{-- section b --}}
-            <div class="bg-gray-100 py-1 flex flex-col justify-center sm:py-1">
+            {{-- <div class="bg-gray-100 py-1 flex flex-col justify-center sm:py-1">
                 <div class="relative py-1 sm:max-w-xl sm:mx-auto">
                     <div class="relative px-6 py-10 bg-white mx-8 md:mx-0 shadow rounded-3xl sm:p-10">
                         <div class="max-w-md mx-auto">
@@ -132,7 +123,6 @@
                                             เพิ่มข้อมูลร้านค้า
                                         </p>
                                     </div>
-                                    {{-- <p class="text-sm text-gray-500 font-normal leading-relaxed"></p> --}}
                                 </div>
                             </div>
                             <div class="divide-y divide-gray-200">
@@ -153,25 +143,6 @@
                                             class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
                                             placeholder="ระบุที่อยู่ร้านค้า">
                                     </div>
-                                    {{-- <div class="flex items-center space-x-4">
-                                        <div class="flex flex-col">
-                                            <label class="leading-loose">รหัสผ่าน</label>
-                                            <div class="relative max-w-sm focus-within:text-gray-600 text-gray-400">
-                                                <input type="password" name="password"
-                                                    class="pr-4 pl-10 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
-                                                    placeholder="ระบุรหัสผ่าน">
-                                            </div>
-                                        </div>
-                                        <div class="flex flex-col">
-                                            <label class="leading-loose">ยืนยันรหัสผ่าน</label>
-                                            <div class="relative focus-within:text-gray-600 text-gray-400">
-                                                <input type="password" name="re-password"
-                                                    class="pr-4 pl-10 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
-                                                    placeholder="ยืนยันรหัสผ่าน">
-                                            </div>
-                                        </div>
-                                    </div> --}}
-
                                     <div class="flex flex-col">
                                         <label class="leading-loose">จังหวัด</label>
                                         <select id="userSel" name="event_assign"
@@ -225,7 +196,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </form>
 
         {{-- Modal --}}
@@ -241,8 +212,8 @@
         <label for="my-modal" class="modal cursor-pointer">
             <div class="modal-box relative alert alert-success shadow-lg">
                 <div>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current flex-shrink-0 h-6 w-6"
-                        fill="none" viewBox="0 0 24 24">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current flex-shrink-0 h-6 w-6" fill="none"
+                        viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
