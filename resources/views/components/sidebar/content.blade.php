@@ -37,11 +37,11 @@
         </x-slot>
     </x-sidebar.link>
 
-    <x-sidebar.link title="รายงาน" href="{{ url('/dashboard/users') }}" :isActive="request()->routeIs('report')">
+    {{-- <x-sidebar.link title="รายงาน" href="{{ url('/dashboard/users') }}" :isActive="request()->routeIs('report')">
         <x-slot name="icon">
             <x-icon name="document-text" solid mini />
         </x-slot>
-    </x-sidebar.link>
+    </x-sidebar.link> --}}
 
     {{-- Examples --}}
 
