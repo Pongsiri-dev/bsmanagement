@@ -197,8 +197,8 @@
 
             {{-- Table Events --}}
             {{-- <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mb-6"> --}}
-            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mb-6 bg-white overflow-hidden shadow-xl sm:rounded-lg mt-6">
-                <div class="container mx-auto px-4 sm:px-8">
+            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mb-6 bg-white overflow-hidden shadow-xl mt-6">
+                <div class="container mx-auto px-4 sm:-mx-6 lg:-mx-8">
                     <div class="py-8">
                         <div>
                             <h2 class="text-2xl font-semibold leading-tight">จำนวนอีเว้นท์ทั้งหมด {{ count($elist) }}
@@ -206,8 +206,9 @@
                             </h2>
                         </div>
                         <div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
-                            <div class="inline-block min-w-full shadow-md rounded-lg overflow-hidden">
-                                <table class="min-w-full leading-normal">
+                            <div
+                                class="relative overflow-auto overflow-x-scroll inline-block min-w-full shadow-md rounded-lg">
+                                <table class="table-auto min-w-full text-left text-sm font-light">
                                     <thead>
                                         <tr>
                                             <th

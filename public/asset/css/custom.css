@@ -388,6 +388,14 @@ footer{
     .sidenav a {font-size: 18px;}
   }
  @media (max-width: 500px) {
+
+    .sectionone {
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 600px;
+        background-position: bottom;
+    }
+
     .sectionthree{
         height: 280px;
     }
