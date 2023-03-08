@@ -73,7 +73,7 @@
                                         </div>
                                         <div class="grid grid-cols-2">
                                             <div class="px-4 py-2 font-semibold">เบอร์โทรศัพท์</div>
-                                            <div class="px-4 py-2">{{ phoneNumberFormat($data['member']['telephone']) }}
+                                            <div class="px-4 py-2">{{ $data['member']['telephone'] }}
                                             </div>
                                         </div>
                                         <div class="grid grid-cols-2">
