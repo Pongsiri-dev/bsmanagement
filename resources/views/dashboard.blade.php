@@ -206,75 +206,71 @@
                             </h2>
                         </div>
                         <div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
-                            <div
-                                class="relative overflow-auto overflow-x-scroll inline-block min-w-full shadow-md rounded-lg">
+                            <div class="inline-block min-w-full shadow-md rounded-lg overflow-hidden">
                                 <table class="table-auto min-w-full text-left text-sm font-light">
                                     <thead>
                                         <tr>
-                                            <th
-                                                class="px-6 py-4 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
+                                            <th scope="row"
+                                                class="px-1 py-2 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
                                                 ลำดับ
                                             </th>
-                                            <th
-                                                class="px-6 py-4 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
+                                            <th scope="col"
+                                                class="px-1 py-2 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
                                                 ชื่ออีเว้นท์
                                             </th>
-                                            <th
-                                                class="px-6 py-4 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
+                                            <th scope="col"
+                                                class="px-1 py-2 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
                                                 รายละเอียด
                                             </th>
                                             <th
-                                                class="px-6 py-4 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
+                                                class="px-1 py-2 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
                                                 สถานที่จัดงาน
                                             </th>
                                             <th
-                                                class="px-6 py-4 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
+                                                class="px-1 py-2 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
                                                 สถานะ
                                             </th>
                                             <th
-                                                class="px-6 py-4 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
-                                                สถานะผู้เข้าร่วม
+                                                class="px-1 py-2 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
+                                                ผู้เข้าร่วม
                                             </th>
                                             <th
-                                                class="px-6 py-4 border-b-2 border-gray-200 bg-gray-100 text-center text-xs font-semibold text-gray-700 uppercase tracking-wider">
+                                                class="px-1 py-2 border-b-2 border-gray-200 bg-gray-100 text-center text-xs font-semibold text-gray-700 uppercase tracking-wider">
                                                 จัดการ</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         @php($e = 1)
                                         @foreach ($elist as $item)
-                                            <tr>
-                                                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                            <tr class="whitespace-no-wrap">
+                                                <td scope="row"
+                                                    class="px-3 py-4 text-gray-900 whitespace-nowrap dark:text-white">
                                                     {{ $e++ }}
                                                 </td>
-                                                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                                    <div class="flex">
-                                                        {{-- <div class="flex-shrink-0 w-10 h-10">
-                                                            <img class="w-full h-full rounded-full"
-                                                                src="{{ $item->event_name }}" alt="" />
-                                                        </div> --}}
-                                                        <div class="ml-0">
-                                                            <p class="text-gray-900 whitespace-no-wrap">
-                                                                {{ $item->event_name }}
-                                                            </p>
-                                                            <p class="text-gray-600 whitespace-no-wrap">
-                                                                ผู้จัด : {{ $item->event_author }}
-                                                            </p>
-                                                        </div>
-                                                    </div>
+                                                <td scope="row"
+                                                    class="px-2 py-4 text-gray-900 whitespace-nowrap dark:text-white">
+                                                    <p class="text-gray-900">
+                                                        {{ $item->event_name }}
+                                                    </p>
+                                                    <p class="text-gray-600">
+                                                        ผู้จัด : {{ $item->event_author }}
+                                                    </p>
                                                 </td>
-                                                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                                <td scope="row"
+                                                    class="px-2 py-4 text-gray-900 whitespace-nowrap dark:text-white">
                                                     <p class="text-gray-900 whitespace-no-wrap">
                                                         {{ $item->event_description }}</p>
-                                                    {{-- <p class="text-gray-600 whitespace-no-wrap">USD</p> --}}
                                                 </td>
-                                                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                                    <p class="text-gray-900 whitespace-no-wrap">{{ $item->event_venue }}
+                                                <td scope="row"
+                                                    class="px-2 py-4 text-gray-900 whitespace-nowrap dark:text-white">
+                                                    <p class="text-gray-900 whitespace-no-wrap">
+                                                        {{ $item->event_venue }}
                                                     </p>
                                                     <p class="text-gray-600 whitespace-no-wrap">
                                                         {{ $item->created_at->diffForHumans() }}</p>
                                                 </td>
-                                                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                                <td scope="row"
+                                                    class="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
                                                     @if ($item->event_edate > Carbon\Carbon::now())
                                                         <span
                                                             class="relative inline-block px-3 py-1 font-semibold leading-tight">
@@ -288,14 +284,9 @@
                                                                 class="absolute inset-0 bg-red-400 opacity-300 rounded-full"></span>
                                                         </span>
                                                     @endif
-                                                    {{-- <span
-                                                        class="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight">
-                                                        <span aria-hidden
-                                                            class="absolute inset-0 bg-green-200 opacity-50 rounded-full"></span>
-                                                        <span class="relative">ใช้งาน</span>
-                                                    </span> --}}
                                                 </td>
-                                                <td>
+                                                <td scope="row"
+                                                    class="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
                                                     <div class="flex items-center">
                                                         <span class="mr-1">{{ $randomNumber }}%</span>
                                                         <div class="relative w-full">
@@ -308,16 +299,12 @@
                                                         </div>
                                                     </div>
                                                 </td>
-                                                <td
-                                                    class="px-5 py-5 border-b border-gray-200 bg-white text-sm text-right">
+                                                <td scope="row"
+                                                    class="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white text-center">
                                                     <a href="{{ route('audiencelist', $item->id) }}"
                                                         class="bg-white py-1 px-4 border-2 border-x-orange-400 shadow">
                                                         ดูข้อมูล
                                                     </a>
-                                                    {{-- <button
-                                                        class="bg-white hover:bg-gray-100 text-gray-800 py-1 px-4 border border-gray-400 rounded shadow">
-                                                        ดูข้อมูล
-                                                    </button> --}}
                                                 </td>
                                             </tr>
                                         @endforeach()
@@ -460,14 +447,13 @@
             {{-- </div> --}}
 
             {{-- Table Users --}}
-            {{-- <div class="max-w-7xl mx-auto sm:px-6 lg:px-8"> --}}
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 bg-white overflow-hidden shadow-xl sm:rounded-lg">
                 <div class="container mx-auto px-4 sm:px-8">
                     <div class="py-8">
                         <div>
                             <h2 class="text-2xl font-semibold leading-tight">จำนวนสมาชิกทั้งหมด
                                 {{ count((array) $child['result']) }}
-                                คน </br>
+                                คน
                             </h2>
                         </div>
                         <div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
@@ -475,58 +461,55 @@
                                 <table class="min-w-full leading-normal">
                                     <thead>
                                         <tr>
-                                            <th
+                                            <th scope="col"
                                                 class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
                                                 ลำดับ
                                             </th>
-                                            <th
+                                            <th scope="col"
                                                 class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
                                                 ลูกทีม
                                             </th>
-                                            <th
+                                            <th scope="col"
                                                 class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
                                                 เบอร์โทรศัพท์
                                             </th>
-                                            <th
+                                            <th scope="col"
                                                 class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
                                                 วันที่สมัคร
                                             </th>
-                                            <th
+                                            <th scope="col"
                                                 class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
                                                 สถานะ
                                             </th>
-                                            <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100"></th>
+                                            <th scope="col"
+                                                class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100"></th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         @php($i = 1)
                                         @foreach ($child['result'] as $item)
                                             <tr class="hover:scale-105 duration-500">
-                                                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                                <td scope="row"
+                                                    class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white text-sm">
                                                     {{ $i++ }}
                                                 </td>
-                                                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                                    <div class="flex">
-                                                        {{-- <div class="flex-shrink-0 w-10 h-10">
-                                                        <img class="w-full h-full rounded-full"
-                                                            src="{{ $item->profile_photo_url }}" alt="" />
-                                                    </div> --}}
-                                                        <div class="ml-3">
-                                                            <p class="text-gray-900 whitespace-no-wrap">
-                                                                คุณ {{ $item['name'] . ' ' . $item['lastname'] }}
-                                                            </p>
-                                                            <p class="text-gray-600 whitespace-no-wrap">
-                                                                {{ $item['member_code'] }}
-                                                            </p>
-                                                        </div>
-                                                    </div>
+                                                <td scope="row"
+                                                    class="px-6 py-4 font-small text-gray-900 whitespace-nowrap dark:text-white text-sm">
+                                                    <p class="text-gray-900 whitespace-no-wrap">
+                                                        คุณ {{ $item['name'] . ' ' . $item['lastname'] }}
+                                                    </p>
+                                                    <p class="text-gray-600 whitespace-no-wrap">
+                                                        {{ $item['member_code'] }}
+                                                    </p>
                                                 </td>
-                                                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                                <td scope="row"
+                                                    class="px-6 py-4 font-small text-gray-900 whitespace-nowrap dark:text-white text-sm">
                                                     <p class="text-gray-900 whitespace-no-wrap">
                                                         {{ $item['telephone'] }}
                                                     </p>
                                                 </td>
-                                                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                                <td scope="row"
+                                                    class="px-6 py-4 font-small text-gray-900 whitespace-nowrap dark:text-white text-sm">
                                                     <p class="text-gray-900 whitespace-no-wrap">
                                                         {{ SlashDateOnly($item['created']) }}
                                                     </p>
@@ -534,7 +517,8 @@
                                                         {{ \Carbon\Carbon::parse($item['created'])->diffForHumans() }}
                                                     </p>
                                                 </td>
-                                                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                                <td scope="row"
+                                                    class="px-6 py-4 font-small text-gray-900 whitespace-nowrap dark:text-white text-sm">
                                                     <span
                                                         class="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight">
                                                         <span aria-hidden
@@ -542,17 +526,6 @@
                                                         <span class="relative">ใช้งาน</span>
                                                     </span>
                                                 </td>
-                                                {{-- <td
-                                                    class="px-5 py-5 border-b border-gray-200 bg-white text-sm text-right">
-                                                    <button type="button"
-                                                        class="inline-block text-gray-500 hover:text-gray-700">
-                                                        <svg class="inline-block h-6 w-6 fill-current"
-                                                            viewBox="0 0 24 24">
-                                                            <path
-                                                                d="M12 6a2 2 0 110-4 2 2 0 010 4zm0 8a2 2 0 110-4 2 2 0 010 4zm-2 6a2 2 0 104 0 2 2 0 00-4 0z" />
-                                                        </svg>
-                                                    </button>
-                                                </td> --}}
                                             </tr>
                                         @endforeach()
                                         {{-- <tr>

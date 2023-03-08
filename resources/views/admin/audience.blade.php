@@ -53,10 +53,13 @@
                                     @php($e = 1)
                                     @foreach ($events as $item)
                                         <tr>
-                                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                            {{-- <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> --}}
+                                            <td scope="row"
+                                                class="px-6 py-4 font-small text-gray-900 whitespace-nowrap dark:text-white text-sm">
                                                 {{ $e++ }}
                                             </td>
-                                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                            <td scope="row"
+                                                class="px-6 py-4 font-small text-gray-900 whitespace-nowrap dark:text-white text-sm">
                                                 <div class="flex">
                                                     {{-- <div class="flex-shrink-0 w-10 h-10">
                                                         <img class="w-full h-full rounded-full"
@@ -70,11 +73,13 @@
                                                     </div>
                                                 </div>
                                             </td>
-                                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                            <td scope="row"
+                                                class="px-6 py-4 font-small text-gray-900 whitespace-nowrap dark:text-white text-sm">
                                                 <p class="text-gray-900 whitespace-no-wrap">
                                                     {{ $item->event_description }}</p>
                                             </td>
-                                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                            <td scope="row"
+                                                class="px-6 py-4 font-small text-gray-900 whitespace-nowrap dark:text-white text-sm">
                                                 <p class="text-gray-900 whitespace-no-wrap">
                                                     {{ $item->event_venue }}
                                                 </p>
@@ -84,7 +89,8 @@
 
                                                 </p>
                                             </td>
-                                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                            <td scope="row"
+                                                class="px-6 py-4 font-small text-gray-900 whitespace-nowrap dark:text-white text-sm">
                                                 @if ($item->event_edate > Carbon\Carbon::now())
                                                     <span
                                                         class="relative inline-block px-3 py-1 font-semibold leading-tight">
@@ -99,7 +105,8 @@
                                                     </span>
                                                 @endif
                                             </td>
-                                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm text-center">
+                                            <td scope="row"
+                                                class="px-6 py-4 font-small text-gray-900 whitespace-nowrap dark:text-white text-sm text-center">
                                                 {{-- <button class="bg-white py-1 px-4 border-2 border-x-orange-400 shadow">
                                                     ดูข้อมูล
                                                 </button> --}}
