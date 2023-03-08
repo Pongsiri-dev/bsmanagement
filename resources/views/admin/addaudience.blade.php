@@ -46,7 +46,7 @@
                                         <div class="flex flex-col">
                                             <label class="leading-loose">ชื่อจริง</label>
                                             <div class="relative max-w-sm focus-within:text-gray-600 text-gray-400">
-                                                <input type="text" name="firstname"
+                                                <input required type="text" name="firstname"
                                                     class="pr-4 pl-10 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
                                                     placeholder="ระบุชื่อจริง">
                                             </div>
@@ -54,7 +54,7 @@
                                         <div class="flex flex-col">
                                             <label class="leading-loose">นามสกุล</label>
                                             <div class="relative focus-within:text-gray-600 text-gray-400">
-                                                <input type="text" name="lastname"
+                                                <input required type="text" name="lastname"
                                                     class="pr-4 pl-10 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
                                                     placeholder="ระบุนามสกุล">
                                             </div>
@@ -62,9 +62,15 @@
                                     </div>
                                     <div class="flex flex-col">
                                         <label class="leading-loose">เบอร์โทรศัพท์</label>
-                                        <input type="text" name="phone"
+                                        <input required type="text" name="phone"
                                             class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
                                             placeholder="ระบุเบอร์โทรศัพท์">
+                                    </div>
+                                    <div class="flex flex-col">
+                                        <label class="leading-loose">อาชีพ</label>
+                                        <input required type="text" name="career"
+                                            class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
+                                            placeholder="ระบุอาชีพ">
                                     </div>
                                     <div class="flex flex-col">
                                         <label class="leading-loose">กรุณาเลือกเข้าร่วมอีเว้นท์</label>

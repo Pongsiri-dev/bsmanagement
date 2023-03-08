@@ -13,6 +13,7 @@ class CheckInEvent extends Model
         'member_code',
         'member_firstname',
         'member_lastname',
-        'member_telephone'
+        'member_telephone',
+        'member_career'
     ];
 }

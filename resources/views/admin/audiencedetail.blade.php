@@ -36,9 +36,6 @@
                             วันที่สิ้นสุด: {{ $event[0]->event_edate }}
                         </div>
                     </div>
-
-
-
                 </div>
                 {{-- section audience list --}}
                 <div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
@@ -86,8 +83,11 @@
                                                         คุณ {{ $item->member_firstname . ' ' . $item->member_lastname }}
                                                     </p>
                                                     <p class="text-gray-600 whitespace-no-wrap">
-                                                        {{ $item->member_code }}
+                                                        รหัส {{ $item->member_code }}
                                                     </p>
+                                                    <span class="text-gray-600 whitespace-no-wrap">
+                                                        อาชีพ {{ $item->member_career }}
+                                                    </span>
                                                 </div>
                                             </div>
                                         </td>

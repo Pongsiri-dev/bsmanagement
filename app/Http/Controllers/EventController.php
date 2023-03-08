@@ -52,6 +52,7 @@ class EventController extends Controller
             $checkIn->member_firstname = $request->firstname;
             $checkIn->member_lastname = $request->lastname;
             $checkIn->member_telephone = $request->phone;
+            $checkIn->member_career = $request->career;
         } else {
             return redirect()->back()->with('warning', 'ไม่สามารถลงทะเบียนได้');
         }
