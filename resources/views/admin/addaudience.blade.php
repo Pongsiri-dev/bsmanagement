@@ -77,7 +77,7 @@
                                         <select id="userSel" name="event_id"
                                             class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600">
                                             @foreach ($eList as $item)
-                                                @if ($item->event_edate > Carbon\Carbon::now())
+                                                @if ($item->event_edate >= Carbon\Carbon::now())
                                                     <option value="{{ $item->id }}">{{ $item->event_name }}</option>
                                                 @endif
                                             @endforeach
