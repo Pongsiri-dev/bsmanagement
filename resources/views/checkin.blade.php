@@ -127,7 +127,7 @@
                                                     </div>
                                                     <div class="pt-4 flex items-center space-x-4">
                                                         <button type="submit"
-                                                            class="transition ease-in duration-300 mt-10 flex w-full items-center justify-center rounded-md border bg-orange-400 py-3 px-8 font-small hover:bg-orange-400">
+                                                            class="transition ease-in duration-300 mt-10 flex w-full items-center justify-center rounded-md border bg-orange-400 py-3 px-8 font-small text-black hover:bg-orange-400">
                                                             เข้าร่วม</button>
                                                     </div>
                                                 </div>
@@ -163,6 +163,9 @@
         <script>
             $(document).ready(function() {
                 $('.btn').click();
+                setTimeout(() => {
+                    window.location.href = "http://bsmanagement.info/";
+                }, 2000);
             })
         </script>
     @endif
