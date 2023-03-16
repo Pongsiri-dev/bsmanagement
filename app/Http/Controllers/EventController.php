@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Storage;
 use App\Models\User;
 use App\Models\Events;
 use SimpleSoftwareIO\QrCode\Generator;
-
+use Carbon\Carbon;
 
 class EventController extends Controller
 {
@@ -63,15 +63,19 @@ class EventController extends Controller
     // บันทึกข้อมูล
     public function store(Request $request)
     {
+        $dtStart = Carbon::create($request->event_sdate)->startOfDay();
+        $dtEnd = Carbon::create($request->event_edate)->endOfDay();
+
         $event = new Events;
         $event->event_name = $request->event_name;
         $event->event_description = $request->event_description;
         $event->event_venue = $request->event_venue;
         $event->event_assign = $request->event_assign;
         $event->event_path = null;
-        $event->event_sdate = $request->event_sdate;
-        $event->event_edate = $request->event_edate;
+        $event->event_sdate = $dtStart;
+        $event->event_edate = $dtEnd;
         $event->event_author = Auth::user()->name;
+
 
         // exec query
         $event->save();

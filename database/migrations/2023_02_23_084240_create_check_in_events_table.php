@@ -20,7 +20,7 @@ return new class extends Migration {
             $table->string('member_firstname');
             $table->string('member_lastname');
             $table->string('member_telephone');
-            $table->string('member_career');
+            $table->string('member_career')->nullable();
             $table->timestamps();
         });
     }

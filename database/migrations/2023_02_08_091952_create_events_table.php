@@ -20,8 +20,8 @@ return new class extends Migration {
             $table->string('event_assign');
             $table->string('event_path')->nullable();
             $table->string('event_author');
-            $table->date('event_sdate');
-            $table->date('event_edate');
+            $table->dateTimeTz('event_sdate', $precision = 0);
+            $table->dateTimeTz('event_edate', $precision = 0);
             $table->timestamps();
             $table->softDeletes();
         });
