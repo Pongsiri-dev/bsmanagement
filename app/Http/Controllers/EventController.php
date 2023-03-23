@@ -80,7 +80,7 @@ class EventController extends Controller
         // exec query
         $event->save();
         $pathQR = 'QrCode/' . $event->event_name . '_' . $event->id . '.svg';
-        QrCode::format('svg')->generate('www.bsmanagement.info/checkin/' . $event->id, public_path('QrCode/' . $event->event_name . '_' . $event->id . '.svg'));
+        QrCode::format('svg')->generate('https://www.bsmanagement.info/checkin/' . $event->id, public_path('QrCode/' . $event->event_name . '_' . $event->id . '.svg'));
 
         //exec update statement
         DB::table('events')
