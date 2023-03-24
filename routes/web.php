@@ -49,10 +49,6 @@ Route::controller(SearchController::class)->group(function () {
 
 })->name('search');
 
-// Users
-// Route::get('/dashboard/addaudience', [UserController::class, 'index'])->name('addaudience');
-// Route::get('/dashboard/users', [UserController::class, 'index'])->name('users');
-
 // Event
 Route::controller(EventController::class)->group(function () {
     Route::get('/dashboard/events/new', 'index')->name('events');
