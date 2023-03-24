@@ -473,7 +473,9 @@ footer{
     }
     footer {
         background-image: unset;
-       
+        font-size: x-small;
+        background-image: url(../image/mobile/bg-footer.png);
+        height: auto;
     }
     .sectiontwo {
         background-image: url(../image/mobile/sectiontwo.png);

@@ -727,7 +727,7 @@
 
     <footer>
         <div class="container mx-auto mt-10 lg:px-28 md:px-10 px-0">
-            <div class="lg:grid-cols-3 md:grid-cols-3 grid gap-3 text-white">
+            <div class="lg:grid-cols-3 md:grid-cols-3 md:grid flex gap-3 text-white">
                 <div>
                     <h1 class="text-white text-3xl mb-4">Contact</h1>
                     <div class="flex">
