@@ -101,7 +101,7 @@
                                         <img class="w-24 mr-4" src="asset/image/icon-01.png" />
                                         <div class="text-center">
                                             <p class="text-white">จำนวนสมาชิกในระบบ</p>
-                                            <p><span class="text-orange-500 text-4xl">45,000</span> คน</p>
+                                            <p><span class="text-orange-500 text-4xl">45,000</span> ธุรกิจ</p>
                                         </div>
                                     </div>
                                 </div>
@@ -112,7 +112,7 @@
                                         <div>
                                             <p class="text-white">ยอดแลกเปลี่ยน</p>
                                             <p class="text-white"><span
-                                                    class="text-orange-500 text-4xl">4,500,000,000</span> บาท</p>
+                                                    class="text-orange-500 text-4xl">9,000,000,000</span> point</p>
                                         </div>
                                     </div>
                                 </div>
