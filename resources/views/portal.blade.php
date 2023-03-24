@@ -9,65 +9,68 @@
 </head>
 
 <body>
-    <header class="absolute w-full lg:top-12	top-4">
-        <nav class="flex items-center justify-between flex-wrap bg-inherit p-5 lg:px-28 px-4">
+    <header class="absolute w-full lg:top-12 top-4">
+        <nav class="flex items-center justify-between bg-inherit p-5 xl:px-28 lg:px-10 px-4">
             <div class="flex items-center flex-shrink-0 text-white mr-6">
-                <img class="w-60" src="asset/image/logo.png" />
+                <img class="w-60 img-logo" src="asset/image/logo.png" />
             </div>
 
-            <div class="block lg:hidden">
-                <span onclick="openNav()">
-                    <img class="w-6 " src="asset/image/icon-hamburger.png" />
-                </span>
+            <div class="block md:hidden">
+                <div class="flex items-center">
+                    <a href="/" class="block lg:inline-block  text-orange-500 mr-4"> หน้าแรก </a>
+                    <span onclick="openNav()">
+
+                        <img class="w-6" src="asset/image/icon-hamburger.png" />
+                    </span>
+                </div>
+
                 <div id="mySidenav" class="sidenav">
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                    <a href="#responsive-header"
-                        class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-500 "> หน้าแรก </a>
-                    <a href="#responsive-header"
-                        class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-500 "> เกี่ยวกับเรา </a>
-                    <a href="#responsive-header"
-                        class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-500 ">
+                    <a href="/" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-500">
+                        เกี่ยวกับเรา </a>
+                    <a href="/" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-500">
                         ประโยชน์ที่คุณจะได้รับ </a>
-                    <a href="#responsive-header"
-                        class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-500 "> Point&Bigpoint
-                    </a>
-                    <a href="#responsive-header"
-                        class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-500 "> กิจกรรม </a>
-                    <a href="#responsive-header"
-                        class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-500 "> บทความ </a>
-                    <a href="{{ url('/login') }}"
-                        class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-500 "> เข้าสู่ระบบ </a>
-                    <a href="#responsive-header"
-                        class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-500"> ติดต่อเรา </a>
+                    <a href="/" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-500">
+                        Point&Bigpoint </a>
+                    <a href="/" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-500">
+                        กิจกรรม </a>
+                    <a href="/" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-500">
+                        บทความ </a>
+                    <a href="/" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-500">
+                        สมัครสมาชิก </a>
+                    <a href="/" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-500">
+                        ติดต่อเรา </a>
                 </div>
             </div>
-            <div class="hidden lg:block">
-                <a href="#responsive-header"
-                    class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-500 mr-4"> หน้าแรก </a>
-                <a href="#responsive-header"
-                    class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-500 mr-4"> เกี่ยวกับเรา </a>
-                <a href="#responsive-header"
-                    class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-500 mr-4">
-                    ประโยชน์ที่คุณจะได้รับ </a>
-                <a href="#responsive-header"
-                    class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-500 mr-4"> Point&Bigpoint
-                </a>
-                <a href="#responsive-header"
-                    class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-500 mr-4"> กิจกรรม </a>
-                <a href="#responsive-header"
-                    class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-500 mr-4"> บทความ </a>
-                <a href="{{ url('/login') }}"
-                    class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-500 mr-4"> เข้าสู่ระบบ </a>
-                <a href="#responsive-header"
-                    class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-500"> ติดต่อเรา </a>
+            <div class="hidden md:block">
+                <div class="md:flex block menu-phone">
+                    <a href="/" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-500 mr-4">
+                        หน้าแรก </a>
+                    <a href="/" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-500 mr-4">
+                        เกี่ยวกับเรา </a>
+                    <a href="/" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-500 mr-4">
+                        ประโยชน์ที่คุณจะได้รับ </a>
+                    <a href="/" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-500 mr-4">
+                        Point&Bigpoint </a>
+                    <a href="/" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-500 mr-4">
+                        กิจกรรม </a>
+                    <a href="/" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-500 mr-4">
+                        บทความ </a>
+                    <a href="/" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-500 mr-4">
+                        สมัครสมาชิก </a>
+                    <a href="/" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-500">
+                        ติดต่อเรา </a>˝
+
+                </div>
+
             </div>
         </nav>
     </header>
     <!-- section 1 -->
     <section class="sectionone box-content">
         <div class="container mx-auto">
-            <div class="w-full md:w-1/2 columns-lg h-5/6 grid content-center px-4">
-                <div class="lg:pt-96 pt-60">
+            <div class="w-full lg:w-1/2 columns-lg h-5/6 grid content-center px-4">
+                <div class="lg:pt-96 pt-96">
                     <img class="w-96" src="asset/image/WEB_Barter_01.png" />
                     <p class="text-white fix-padding">Bigpoint เหรียญคนไทย ใช้ได้จริง สร้างโอกาสใหม่ เพิ่มช่องทาง
                         ขยายฐานลูกค้า จากสินค้า และบริการของคุณ</p>
@@ -78,11 +81,11 @@
     <!-- section 1  end -->
 
     <!-- section 2 -->
-    <section class="sectiontwo box-content md:pt-40 pt-20">
+    <section class="sectiontwo box-content lg:pt-40 pt-20">
         <div class="container mx-auto">
-            <div class="flex justify-center text-center md:px-48 px-12">
+            <div class="flex justify-center text-center md:px-28 lg:px-60 px-8">
                 <div>
-                    <h1 class="text-5xl font-bold text-white mb-8 leading-normal		">รู้จัก <span
+                    <h1 class="text-5xl font-bold text-white mb-8 leading-normal">รู้จัก <span
                             class="text-orange-500">Barter</span>smart มากขึ้น</h1>
                     <p class="text-white">
                         <span>เราคือ Platform แลกเปลี่ยนสินค้าไม่ใช้เงิน ที่จะช่วยให้ธุรกิจของคุณ
@@ -92,7 +95,7 @@
                     </p>
                     <div>
                         <div class="lg:flex grid py-8">
-                            <div class="lg:w-1/2 w-full h-40 my-2">
+                            <div class="lg:w-1/2 w-full h-40 my-2 px-0 lg:px-0">
                                 <div class="bg-black border-orange-500 rounded-3xl mx-4 border-2 h-full">
                                     <div class="flex justify-center items-center h-full">
                                         <img class="w-24 mr-4" src="asset/image/icon-01.png" />
@@ -103,7 +106,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="lg:w-1/2 w-full h-40 my-2">
+                            <div class="lg:w-1/2 w-full h-40 my-2 px-0 lg:px-0">
                                 <div class="bg-black border-orange-500 rounded-3xl mx-4 border-2 h-full">
                                     <div class="flex justify-center items-center h-full">
                                         <div>
@@ -123,10 +126,22 @@
     <!-- section 2 end -->
 
     <!-- section 3 -->
-    <section class="sectionthree box-content lg:pt-20 pt-96">
+    <section class="sectionthree box-content lg:pt-20 pt-20">
         <div class="container mx-auto">
-            <div class="flex justify-center">
-                <img class="lg:w-2/3 w-full" src="asset/image/img-phone.png" />
+            <div class="flex justify-center ">
+                <img class="lg:w-2/3 w-full md:block hidden " src="asset/image/img-phone.png" />
+                <img class="w-full  md:hidden block" src="asset/image/mobile/WEB_Barter_1.png" />
+            </div>
+            <div class="lg:w-1/2 w-full flex justify-center items-center  lg:hidden block">
+                <div class="lg:px-10 px-0 text-center">
+                    <h1 class="text-5xl font-bold text-orange-500 mb-4">สมัครฟรี!</h1>
+                    <p class="text-white text-5xl">“ไม่มีค่าใช้จ่าย”</p>
+                    <div class="flex justify-center my-6">
+                        <img class="w-1/4" src="asset/image/applestore.png" />
+                        <img class="w-1/4" src="asset/image/google.png" />
+                    </div>
+                    <p class="text-white  mb-10">ดาวน์โหลดฟรี ทั้ง IOS และ Android</p>
+                </div>
             </div>
         </div>
     </section>
@@ -135,7 +150,7 @@
     <!-- section 4 -->
     <section class="sectionfour box-content pt-20">
         <div class="container mx-auto">
-            <div class="lg:flex grid mb-4 text-center">
+            <div class="lg:flex grid mb-4 text-center  lg:block hidden">
                 <div class="lg:w-1/2 w-full flex justify-center items-center">
                     <div>
                         <h1 class="text-5xl font-bold text-orange-500 mb-4">สมัครฟรี!</h1>
@@ -144,7 +159,7 @@
                             <img class="w-1/4" src="asset/image/applestore.png" />
                             <img class="w-1/4" src="asset/image/google.png" />
                         </div>
-                        <p class="text-white">ดาวน์โหลดฟรี ทั้ง IOS และ Android</p>
+                        <p class="text-white ">ดาวน์โหลดฟรี ทั้ง IOS และ Android</p>
                     </div>
                 </div>
                 <div class="lg:w-1/2 w-full">
@@ -160,10 +175,10 @@
     <!-- section 5 -->
     <section class="sectionfive box-content pt-20">
         <div class="container mx-auto">
-            <div class="lg:flex grid mb-4 text-center">
-                <div class="lg:w-1/2 w-full">
-                    <div>
-                        <img cclass="lg:w-full w-1/2 mx-auto" src="asset/image/imgnotebook.png" />
+            <div class="lg:flex grid text-center">
+                <div class="lg:w-1/2 w-full ">
+                    <div class="lg:block hidden">
+                        <img cclass="w-full mx-auto" src="asset/image/imgnotebook.png" />
                     </div>
                 </div>
                 <div class="lg:w-1/2 w-full flex justify-center items-center">
@@ -172,6 +187,9 @@
                                 class="text-orange-500">Bigpoint</span></h1>
                         <p class="text-white">Bigpoint เป็นที่ยอมรับ สามารถซื้อ-ขายได้ ตั้งแต่ วันที่ 8 พฤศจิกายน 2022
                             บนกระดาน Exchange XT.COM</p>
+                        <div class="lg:hidden block">
+                            <img cclass="lg:w-full w-1/2 mx-auto" src="asset/image/imgnotebook.png" />
+                        </div>
                         <div class="bg-black border-orange-500 rounded-3xl mx-4 border-2 h-full w-80 my-8 mx-auto">
                             <div class="flex justify-center items-center h-full p-5">
                                 <p class="text-5xl text-orange-500 mr-3">24</p>
@@ -181,7 +199,7 @@
                                 </div>
                             </div>
                         </div>
-                        <p class="text-white">*จัดอันดับโดย coinmarketcap.com</p>
+                        <p class="text-white  mb-10">*จัดอันดับโดย coinmarketcap.com</p>
                     </div>
                 </div>
             </div>
@@ -190,20 +208,57 @@
     <!-- section 5 end -->
 
     <!-- section 6 -->
-    <section class="sectionsix box-content pt-20"></section>
+    <section class="sectionsix box-content pt-20">
+        <div class="container mx-auto">
+            <div class="text-center">
+                <h1 class="text-5xl font-bold text-white mb-10">สื่อที่เกี่ยวข้อง</h1>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2">
+                <div class="mx-10 mb-5">
+                    <iframe height="315" src="https://www.youtube.com/embed/TNj8qWc2a2o"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="mx-10 mb-5">
+                    <iframe height="315" src="https://www.youtube.com/embed/uzPs3QGHjw8"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+            <div>
+                <p class="text-center text-white my-10">ติดตามเราได้ที่เฟสบุ๊ก และ ยูทูป บาร์เทอร์สมาร์ท</p>
+            </div>
+            <div class="flex mx-auto justify-center pb-10">
+                <div>
+                    <img class="w-10 mx-10	" src="asset/image/icon-facebook.png" />
+                </div>
+                <div>
+                    <img class="w-10 mx-10	" src="asset/image/icon-you.png" />
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- section 6 end -->
 
     <!-- section 7 -->
     <section class="sectionseven box-content pt-20">
         <div class="container mx-auto text-center">
-            <h1 class="text-white text-5xl leading-normal	"><span class="text-orange-500">Barter</span>smart
-                ช่วยอะไรคุณได้</h1>
-            <div class="grid lg:grid-cols-6 md:grid-cols-3 grid-cols-2 gap-2 my-10">
+
+            <h1 class="text-white text-5xl leading-normal lg:block hidden"><span
+                    class="text-orange-500">Barter</span>smart ช่วยอะไรคุณได้</h1>
+            <h1 class=" text-orange-500 text-5xl leading-normal lg:hidden block">Barter<span
+                    class="text-white">smart</span>
+                <p class="text-white text-2xl	">ช่วยอะไรคุณได้</p>
+            </h1>
+
+            <div class="grid lg:grid-cols-6 md:grid-cols-3 grid-cols-3 lg:gap-2 gap-0 lg:my-10 my-0 py-10">
                 <div class="mx-2">
                     <div class="orangegradient text-center">
                         <img class="w-16 mx-auto mb-4" src="asset/image/icon-02.png" />
                         <p class="text-orange-500 mb-4">Free Marketplace Platform</p>
-                        <p class="text-white text-sm">เข้าถึงง่าย ฟรี ไม่มี ค่าใช้จ่ายและมีกำลังซื้อ
+                        <p class="text-white lg:text-sm text-xs	">เข้าถึงง่าย ฟรี ไม่มี ค่าใช้จ่ายและมีกำลังซื้อ
                             จากนักธุรกิจที่มีสินค้า และบริการ ด้วยระบบ การซื้อขายเฉพาะกลุ่ม</p>
                     </div>
                 </div>
@@ -211,7 +266,7 @@
                     <div class="orangegradient text-center">
                         <img class="w-16 mx-auto mb-4" src="asset/image/icon-03.png" />
                         <p class="text-orange-500 mb-4">สินค้าของคุณ ถูกเปลี่ยนเป็น โอกาสใหม่ทาง ธุรกิจ</p>
-                        <p class="text-white text-sm">
+                        <p class="text-white lg:text-sm text-xs	">
                             Bartersmart ทำหน้าที่ รวบรวมนักธุรกิจจากทั่ว โลกที่มีสินค้าและบริการ เช่นเดียวกับคุณ
                             เพียงคุณ นำสินค้า 5-10% ที่ไม่กระทบ เงินสดมาซื้อ-ขายกันโดย ตรงผ่าน Application
                             Bartersmart
@@ -222,7 +277,7 @@
                     <div class="orangegradient text-center">
                         <img class="w-16 mx-auto mb-4" src="asset/image/icon-04.png" />
                         <p class="text-orange-500 mb-4">สร้างโอกาสใหม่ ในการขาย สินค้า-บริการ</p>
-                        <p class="text-white text-sm">
+                        <p class="text-white lg:text-sm text-xs	">
                             เงินสดหายาก เก็บไว้ใช้ ยามจำเป็น นำต้นทุนที่ ต้องเสียในแต่ละวัน มา เปลี่ยนเป็นรายรับแบบ
                             Point และ Bigpoint เพื่อเพิ่มโอกาสใหม่ใน การขาย
                         </p>
@@ -232,7 +287,7 @@
                     <div class="orangegradient text-center">
                         <img class="w-16 mx-auto mb-4" src="asset/image/icon-05.png" />
                         <p class="text-orange-500 mb-4">Business Machine</p>
-                        <p class="text-white text-sm">
+                        <p class="text-white lg:text-sm text-xs	">
                             คุณมีโอกาสต่อยอด ธุรกิจได้อย่างอิสระ โดย เราได้รวบรวมนักธุรกิจ มากกว่า 45,000 ธุรกิจ
                             ที่พร้อมจะแลกเปลี่ยน สินค้ากับคุณ เช่น ธุรกิจ โรงแรม, ร้านอาหาร, สินค้าการเกษตร
                             และอื่นๆ
@@ -243,7 +298,7 @@
                     <div class="orangegradient text-center">
                         <img class="w-16 mx-auto mb-4" src="asset/image/icon-06.png" />
                         <p class="text-orange-500 mb-4">ปลอดภัย ตรวจสอบได้</p>
-                        <p class="text-white text-sm">
+                        <p class="text-white lg:text-sm text-xs	">
                             Platform เสรี ที่เอื้อ ประโยชน์สำหรับทุกคน ที่ต้องการแลกเปลี่ยนสินค้า และบริการ ผ่านกระเป๋า
                             ดิจิทัล Trust wallet ด้วย การรับ Point และ Bigpoint เพิ่มโอกาสทางการค้า
                             และทำการตลาดแบบ ออนไลน์
@@ -254,8 +309,8 @@
                     <div class="orangegradient text-center">
                         <img class="w-16 mx-auto mb-4" src="asset/image/icon-07.png" />
                         <p class="text-orange-500 mb-4">เปลี่ยนสินค้า เป็นการลงทุน ผ่านเหรียญ Bigpoint</p>
-                        <p class="text-white text-sm">เหรียญ Crytocurrency ที่ใช้งานได้จริงผ่าน นักธุรกิจทั่วโลกที่ต้อง
-                            การเหรียญ Bigpoint ที่มีอยู่อย่างจำกัด</p>
+                        <p class="text-white lg:text-sm text-xs	">เหรียญ Crytocurrency ที่ใช้งานได้จริงผ่าน
+                            นักธุรกิจทั่วโลกที่ต้อง การเหรียญ Bigpoint ที่มีอยู่อย่างจำกัด</p>
                     </div>
                 </div>
             </div>
@@ -518,19 +573,23 @@
     <!-- section 8 end -->
 
     <!-- section 9 -->
-    <section class="sectionnine box-content pt-36">
+    <section class="sectionnine box-content lg:pt-36 pt-20">
         <div class="container mx-auto">
             <div class="text-center">
                 <p class="text-orange-500 text-2xl mb-1">บรรยากาศ</p>
                 <p class="text-white text-2xl">งานแลกเปลี่ยนสินค้า</p>
             </div>
             <div class="flex justify-center">
-                <img class="w-4/5 mx-auto" src="asset/image/imghoneynest-.png" />
+                <img class="w-4/5 mx-auto   lg:block hidden" src="asset/image/imghoneynest-.png" />
+                <img class="w-full mx-auto md:hidden block" src="asset/image/mobile/WEB_Barter_2.png" />
+                <img class="w-full mx-auto lg:hidden hidden md:block" src="asset/image/tablet/img-01.png" />
+
+
             </div>
             <div class="text-center pt-6">
                 <p class="text-white text-2xl">ความประทับใจลูกค้า</p>
             </div>
-            <div class="flex justify-center w-2/4 mx-auto">
+            <div class="flex justify-center w-2/4 mx-auto pb-20">
                 <div class="w-1/3">
                     <img class="w-96 mx-auto" src="asset/image/customer01.png" />
                 </div>
@@ -546,19 +605,19 @@
     <!-- section 9 end -->
 
     <!-- section 10 -->
-    <section class="sectiontenTop box-content pt-36">
+    <section class="sectiontenTop box-content lg:pt-36 pt-20">
         <div class="container mx-auto">
             <div class="text-center">
                 <p class="text-white text-2xl mb-8">ข่าวสาร และกิจกรรม</p>
             </div>
-            <div class="grid lg:grid-cols-3 grid-cols-1 gap-3 news-Fixpadding relative">
+            <div class="grid lg:grid-cols-3 grid-cols-3 lg:gap-3 gap-1 news-Fixpadding relative">
                 <div class="bg-white rounded-xl relative-right">
-                    <div class="max-w-sm rounded overflow-hidden shadow-lg lg:block hidden">
+                    <div class="max-w-sm rounded overflow-hidden shadow-lg">
                         <img class="w-full"
                             src="asset/image/businessman-discussing-with-professional-business-team-terms-contract_1.jpg"
                             alt="Sunset in the mountains" />
-                        <div class="py-4 px-4">
-                            <div class="font-bold text-xl border-orange-500">บทความบทความ</div>
+                        <div class="lg:py-4 py-2 px-2 lg:px-4">
+                            <div class="font-bold lg:text-xl text-sm border-orange-500">บทความบทความ</div>
                             <p class="">บทความบทความ</p>
                             <p class="text-gray-700 text-sm">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla!
@@ -572,8 +631,8 @@
                         <img class="w-full"
                             src="asset/image/businessman-discussing-with-professional-business-team-terms-contract_1.jpg"
                             alt="Sunset in the mountains" />
-                        <div class="py-4 px-4">
-                            <div class="font-bold text-xl border-orange-500">บทความบทความ</div>
+                        <div class="lg:py-4 py-2 px-2 lg:px-4">
+                            <div class="font-bold lg:text-xl text-sm border-orange-500">บทความบทความ</div>
                             <p class="">บทความบทความ</p>
                             <p class="text-gray-700 text-sm">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla!
@@ -582,13 +641,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="lg:block hidden bg-white rounded-xl relative-left">
+                <div class=" bg-white rounded-xl relative-left">
                     <div class="max-w-sm rounded overflow-hidden shadow-lg">
                         <img class="w-full"
                             src="asset/image/businessman-discussing-with-professional-business-team-terms-contract_1.jpg"
                             alt="Sunset in the mountains" />
-                        <div class="py-4 px-4">
-                            <div class="font-bold text-xl border-orange-500">บทความบทความ</div>
+                        <div class="lg:py-4 py-2 px-2 lg:px-4">
+                            <div class="font-bold lg:text-xl text-sm border-orange-500">บทความบทความ</div>
                             <p class="">บทความบทความ</p>
                             <p class="text-gray-700 text-sm">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla!
@@ -604,20 +663,20 @@
                     More</button>
             </div>
             <div class="text-center mt-24">
-                <p class="text-white text-2xl mb-8">บทความ</p>
+                <p class="text-white lg:text-2xl text-3xl	 mb-8">บทความ</p>
             </div>
         </div>
     </section>
     <section class="sectiontenBottom box-content">
         <div class="container mx-auto">
-            <div class="grid lg:grid-cols-3 grid-cols-1 gap-3 news-Fixpadding">
+            <div class="grid lg:grid-cols-3 grid-cols-3 gap-3 news-Fixpadding">
                 <div class="">
-                    <div class="max-w-sm rounded overflow-hidden shadow-lg">
+                    <div class="max-w-sm rounded overflow-hidden">
                         <img class="w-full rounded-t-xl"
                             src="asset/image/businessman-discussing-with-professional-business-team-terms-contract_1.jpg"
                             alt="Sunset in the mountains" />
                         <div class="py-4">
-                            <div class="font-bold text-xl border-orange-500">บทความบทความ</div>
+                            <div class="font-bold lg:text-xl text-sm	 border-orange-500">บทความบทความ</div>
                             <p class="text-white">บทความบทความ</p>
                             <p class="text-white text-sm">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla!
@@ -626,13 +685,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="lg:block hidden">
-                    <div class="max-w-sm rounded overflow-hidden shadow-lg">
+                <div class="">
+                    <div class="max-w-sm rounded overflow-hidden">
                         <img class="w-full rounded-t-xl"
                             src="asset/image/businessman-discussing-with-professional-business-team-terms-contract_1.jpg"
                             alt="Sunset in the mountains" />
                         <div class="py-4">
-                            <div class="font-bold text-xl border-orange-500">บทความบทความ</div>
+                            <div class="font-bold lg:text-xl text-sm	 border-orange-500">บทความบทความ</div>
                             <p class="text-white">บทความบทความ</p>
                             <p class="text-white text-sm">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla!
@@ -641,13 +700,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="lg:block hidden">
-                    <div class="max-w-sm rounded overflow-hidden shadow-lg">
+                <div class="">
+                    <div class="max-w-sm rounded overflow-hidden">
                         <img class="w-full rounded-t-xl"
                             src="asset/image/businessman-discussing-with-professional-business-team-terms-contract_1.jpg"
                             alt="Sunset in the mountains" />
                         <div class="py-4">
-                            <div class="font-bold text-xl border-orange-500">บทความบทความ</div>
+                            <div class="font-bold lg:text-xl text-sm	 border-orange-500">บทความบทความ</div>
                             <p class="text-white">บทความบทความ</p>
                             <p class="text-white text-sm">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla!
@@ -657,7 +716,7 @@
                     </div>
                 </div>
             </div>
-            <div class="mx-auto my-10 text-center">
+            <div class="mx-auto py-10 text-center">
                 <button
                     class="bg-white hover:bg-orange-500 text-orange-500 hover:text-white font-bold py-2 px-10 rounded-full">View
                     More</button>
@@ -667,8 +726,8 @@
     <!-- section 10 end -->
 
     <footer>
-        <div class="container mx-auto mt-10 md:px-28 px-0">
-            <div class="lg:grid-cols-3 md:grid-cols-1 grid gap-3 text-white">
+        <div class="container mx-auto mt-10 lg:px-28 md:px-10 px-0">
+            <div class="lg:grid-cols-3 md:grid-cols-3 grid gap-3 text-white">
                 <div>
                     <h1 class="text-white text-3xl mb-4">Contact</h1>
                     <div class="flex">
@@ -695,9 +754,7 @@
                     <p>กิจกรรม</p>
                     <p class="my-3">บทความ</p>
                     <p>ติดต่อเรา</p>
-                    <p class="my-3">
-                        <a href="{{ url('/login') }}">เข้าสู่ระบบ</a>
-                    </p>
+                    <p class="my-3">สมัครสมาชิก</p>
                 </div>
             </div>
         </div>
