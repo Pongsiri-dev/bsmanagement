@@ -26,7 +26,6 @@ class UserController extends Controller
         ];
         $response = Http::withHeaders($headers)->post($apiURL);
         $responseBody = json_decode($response->getBody(), true);
-        dd($responseBody);
         return view('profile.c');
     }
 }

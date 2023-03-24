@@ -6,6 +6,7 @@
         </x-slot>
     </x-sidebar.link>
 
+    <?php if(Auth::user()->member_code === '0025968'){ ?>
     <x-sidebar.link title="สร้างอีเว้นท์" href="{{ url('/dashboard/events/new') }}" :isActive="request()->routeIs('events')">
         <x-slot name="icon">
             <x-icon name="megaphone" solid mini />
@@ -18,13 +19,14 @@
             {{-- <x-icons.events class="flex-shrink-0 w-6 h-6" aria-hidden="true" /> --}}
         </x-slot>
     </x-sidebar.link>
+    <?php } ?>
 
     <x-sidebar.link title="รายการผู้เข้าร่วม" href="{{ url('/dashboard/audience') }}" :isActive="request()->routeIs('audience')">
         <x-slot name="icon">
             <x-icon name="user-group" solid mini />
         </x-slot>
     </x-sidebar.link>
-
+    <?php if(Auth::user()->member_code === '0025968'){ ?>
     <x-sidebar.link title="เพิ่มข้อมูลผู้เข้าร่วม" href="{{ url('/dashboard/addaudienceview') }}" :isActive="request()->routeIs('addaudienceview')">
         <x-slot name="icon">
             <x-icon name="user" solid mini />
@@ -36,6 +38,7 @@
             <x-icon name="magnifying-glass" solid mini />
         </x-slot>
     </x-sidebar.link>
+    <?php } ?>
 
     {{-- <x-sidebar.link title="รายงาน" href="{{ url('/dashboard/users') }}" :isActive="request()->routeIs('report')">
         <x-slot name="icon">

@@ -50,6 +50,7 @@
                                     </span>
                                     <span class="tracking-wide">ข้อมูลสมาชิก</span>
                                 </div>
+                                {{-- {{ dd($data) }} --}}
                                 <div class="text-gray-700">
                                     <div class="grid md:grid-cols-2 text-sm">
                                         <div class="grid grid-cols-2">
@@ -88,7 +89,13 @@
                                         <div class="grid grid-cols-2">
                                             <div class="px-4 py-2 font-semibold">สถานะ</div>
                                             <div class="px-4 py-2">
-                                                <a class="text-blue-800" href="mailto:jane@example.com">ใช้งาน</a>
+                                                <p class="text-blue-800">ใช้งาน</p>
+                                            </div>
+                                        </div>
+                                        <div class="grid grid-cols-2">
+                                            <div class="px-4 py-2 font-semibold">Wallet</div>
+                                            <div class="px-4 py-2">
+                                                {{ $data['member']['crypto_wallet_id'] }}
                                             </div>
                                         </div>
                                         {{-- <div class="grid grid-cols-2">

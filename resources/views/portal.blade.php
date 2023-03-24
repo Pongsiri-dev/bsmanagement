@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="asset/css/custom.css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <title>Bartersmart</title>
 </head>
 
 <body>
@@ -36,8 +37,9 @@
                         กิจกรรม </a>
                     <a href="/" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-500">
                         บทความ </a>
-                    <a href="/" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-500">
-                        สมัครสมาชิก </a>
+                    <a href="{{ url('/login') }}"
+                        class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-500">
+                        เข้าสู่ระบบ </a>
                     <a href="/" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-500">
                         ติดต่อเรา </a>
                 </div>
@@ -56,8 +58,9 @@
                         กิจกรรม </a>
                     <a href="/" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-500 mr-4">
                         บทความ </a>
-                    <a href="/" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-500 mr-4">
-                        สมัครสมาชิก </a>
+                    <a href="{{ url('/login') }}"
+                        class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-500 mr-4">
+                        เข้าสู่ระบบ </a>
                     <a href="/" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-500">
                         ติดต่อเรา </a>˝
 
@@ -617,9 +620,9 @@
                             src="asset/image/businessman-discussing-with-professional-business-team-terms-contract_1.jpg"
                             alt="Sunset in the mountains" />
                         <div class="lg:py-4 py-2 px-2 lg:px-4">
-                            <div class="font-bold lg:text-xl text-sm border-orange-500">บทความบทความ</div>
-                            <p class="">บทความบทความ</p>
-                            <p class="text-gray-700 text-sm">
+                            <div class="font-bold lg:text-xl text-xs border-orange-500">ข่าวสารและกิจกรรม</div>
+                            <p class="text-xs">บทความบทความ</p>
+                            <p class="text-gray-400 text-sm text-ellipsis overflow-hidden">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla!
                                 Maiores et perferendis eaque, exercitationem praesentium nihil.
                             </p>
@@ -632,9 +635,9 @@
                             src="asset/image/businessman-discussing-with-professional-business-team-terms-contract_1.jpg"
                             alt="Sunset in the mountains" />
                         <div class="lg:py-4 py-2 px-2 lg:px-4">
-                            <div class="font-bold lg:text-xl text-sm border-orange-500">บทความบทความ</div>
-                            <p class="">บทความบทความ</p>
-                            <p class="text-gray-700 text-sm">
+                            <div class="font-bold lg:text-xl text-xs border-orange-500">ข่าวสารและกิจกรรม</div>
+                            <p class="text-xs">บทความบทความ</p>
+                            <p class="text-gray-400 text-sm">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla!
                                 Maiores et perferendis eaque, exercitationem praesentium nihil.
                             </p>
@@ -647,9 +650,9 @@
                             src="asset/image/businessman-discussing-with-professional-business-team-terms-contract_1.jpg"
                             alt="Sunset in the mountains" />
                         <div class="lg:py-4 py-2 px-2 lg:px-4">
-                            <div class="font-bold lg:text-xl text-sm border-orange-500">บทความบทความ</div>
-                            <p class="">บทความบทความ</p>
-                            <p class="text-gray-700 text-sm">
+                            <div class="font-bold lg:text-xl text-xs border-orange-500">ข่าวสารและกิจกรรม</div>
+                            <p class="text-xs">บทความบทความ</p>
+                            <p class="text-gray-400 text-sm">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla!
                                 Maiores et perferendis eaque, exercitationem praesentium nihil.
                             </p>
@@ -727,9 +730,11 @@
 
     <footer>
         <div class="container mx-auto mt-10 lg:px-28 md:px-10 px-0">
+            <div>
+                <h2 class="text-white text-3xl mb-4">Contact</h2>
+            </div>
             <div class="lg:grid-cols-3 md:grid-cols-3 md:grid flex gap-3 text-white">
                 <div>
-                    <h1 class="text-white text-3xl mb-4">Contact</h1>
                     <div class="flex">
                         <img class="h-full mr-3" src="asset/image/icon_map.png" />
                         <p class="text-white w-60">211/3-4 ถนนรัชดาภิเษก แขวงรัชดาภิเษก เขตดินแดง กรุงเทพมหานคร 10400

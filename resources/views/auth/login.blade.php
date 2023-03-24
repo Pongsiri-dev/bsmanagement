@@ -23,9 +23,9 @@
                     <div class="grid gap-6">
                         <!-- Email Address -->
                         <div class="space-y-2">
-                            <x-label for="member_id" :value="__('รหัสสมาชิก')" />
+                            <x-label for="member_id" :value="__('รหัสสมาชิก *กรอกเลขสมาชิก 7 หลัก Ex.0012345')" />
                             <input placeholder="รหัสสมาชิก" type="text"
-                                class="text-md block px-3 py-2 rounded-lg w-full" name="member_code">
+                                class="text-md block px-3 py-2 rounded-lg w-full" name="member_code" required>
                             {{-- <x-input-with-icon-wrapper>
                                 <x-slot name="icon">
                                     <x-heroicon-o-user aria-hidden="true" class="w-5 h-5" />
@@ -41,7 +41,7 @@
                             <div class="py-2" x-data="{ show: true }">
                                 <div class="relative">
                                     <input placeholder="รหัสผ่าน" :type="show ? 'password' : 'text'"
-                                        class="text-md block px-3 py-2 rounded-lg w-full" name="password">
+                                        class="text-md block px-3 py-2 rounded-lg w-full" name="password" required>
                                     <div class="absolute inset-y-0 right-0 pr-6 flex items-center text-sm leading-5">
                                         <svg class="h-6 text-gray-700" fill="none" @click="show = !show"
                                             :class="{ 'hidden': !show, 'block': show }"

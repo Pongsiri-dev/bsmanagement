@@ -14,15 +14,14 @@ class CustomAuthController extends BaseController
 
     public function index()
     {
-        return view('auth.login');
+        // dd("OK");
+        // return view('auth.login');
     }
 
     public function customLogin(Request $request)
     {
         $credentials = request()->only(['member_code', 'password']);
-        dd(Auth::validate($credentials));
         if (!Auth::validate($credentials)) {
-            print_r('Here');
             $user = User::where('member_code', $credentials['member_code'])->first();
             return response()->json(['status' => 'ok']);
             // abort(401);
