@@ -140,8 +140,12 @@
                     <h1 class="text-5xl font-bold text-orange-500 mb-4">สมัครฟรี!</h1>
                     <p class="text-white text-5xl">“ไม่มีค่าใช้จ่าย”</p>
                     <div class="flex justify-center my-6">
-                        <img class="w-1/4" src="asset/image/applestore.png" />
-                        <img class="w-1/4" src="asset/image/google.png" />
+                        <a href="https://apps.apple.com/th/app/bartersmart/id1586611452" class="w-1/4">
+                            <img src="asset/image/applestore.png" />
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=th.co.bartersmart" class="w-1/4">
+                            <img src="asset/image/google.png" />
+                        </a>
                     </div>
                     <p class="text-white  mb-10">ดาวน์โหลดฟรี ทั้ง IOS และ Android</p>
                 </div>
@@ -159,8 +163,12 @@
                         <h1 class="text-5xl font-bold text-orange-500 mb-4">สมัครฟรี!</h1>
                         <p class="text-white text-5xl">“ไม่มีค่าใช้จ่าย”</p>
                         <div class="flex justify-center my-6">
-                            <img class="w-1/4" src="asset/image/applestore.png" />
-                            <img class="w-1/4" src="asset/image/google.png" />
+                            <a href="https://apps.apple.com/th/app/bartersmart/id1586611452" class="w-1/4">
+                                <img src="asset/image/applestore.png" />
+                            </a>
+                            <a href="https://play.google.com/store/apps/details?id=th.co.bartersmart" class="w-1/4">
+                                <img src="asset/image/google.png" />
+                            </a>
                         </div>
                         <p class="text-white ">ดาวน์โหลดฟรี ทั้ง IOS และ Android</p>
                     </div>
@@ -235,10 +243,14 @@
             </div>
             <div class="flex mx-auto justify-center pb-10">
                 <div>
-                    <img class="w-10 mx-10	" src="asset/image/icon-facebook.png" />
+                    <a href="https://m.facebook.com/100057392930795/">
+                        <img class="w-10 mx-10" src="asset/image/icon-facebook.png" />
+                    </a>
                 </div>
                 <div>
-                    <img class="w-10 mx-10	" src="asset/image/icon-you.png" />
+                    <a href="https://youtube.com/@bartersmart">
+                        <img class="w-10 mx-10" src="asset/image/icon-you.png" />
+                    </a>
                 </div>
             </div>
         </div>
